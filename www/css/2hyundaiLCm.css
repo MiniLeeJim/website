@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+h1{
+    font: bold 2.25em Roboto;
+}
+h2{ font: bold 1.875em Roboto; }
+h3{ font: bold 1.56em Roboto; }
+p,a{
+    font: normal 1em Roboto;
+}
+a{
+    padding: 15px 40px;
+}
+.sec1 .sec1_in > p,
+.sec4 .sec4_in > p{
+    display: none;
+}
+
+.sec1{
+    height: 570px;
+}
+
+.sec2{
+    height: 765px;
+}
+.sec2 .sec2_L,
+.sec2 .sec2_L > div{
+    height: 215px;
+}
+.sec2 .sec2_L_img{
+    width: 80%;
+    height: 30%;
+    background-size: 100% 100%;
+    left: calc(50% - 80%/2);
+    top: 55px;
+    background-position: 50% 50%;
+}
+.sec2 .sec2_R{
+    height: 550px;
+}
+.sec2 .sec2_R > div{
+    padding: 100px 20px 0;
+    height: 550px;
+}
+
+.sec3 .sec3_L{
+    padding: 80px 0 0;
+    justify-content: center;
+}
+.sec3 .sec3_R{
+    padding: 0 0 50px;
+    justify-content: center;
+}
+.sec3 .sec3_R div h2{
+    /* display: none; */
+    left: 40px;
+}
+
+.sec4{
+    height: 415px;
+}
+.sec4 .sec4_in > h1{
+    font-size: 1.875em;
+}

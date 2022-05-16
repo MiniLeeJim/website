@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+.sec1 .sec1_in, .sec4 .sec4_in{
+    width: 100%;
+}
+
+.sec1{
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.sec2, .sec3{
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.sec2 .sec2_L, .sec2 .sec2_R,
+.sec3 .sec3_L, .sec3 .sec3_R{
+    width: 100%;
+    justify-content: flex-start;
+}
+.sec2{
+    position: relative;
+}
+.sec2 .sec2_L{
+    height: 400px;
+    position: static;
+}
+.sec2 .sec2_L > div,
+.sec2 .sec2_R > div{
+    width: 100%;
+    padding: 0;
+}
+.sec2 .sec2_L h2{
+    display: none;
+}
+.sec2 .sec2_L_img{
+    width: 650px;
+    top: 150px;
+    left: calc(50% - 650px/2);
+}
+.sec2 .sec2_R{
+    height: 800px;
+}
+.sec2 .sec2_R > div{
+    padding: 200px 150px 0;
+}
+.sec2 .sec2_R > div > h2,
+.sec2 .sec2_R > div > h3,
+.sec2 .sec2_R > div > p{
+    text-align: center;
+}
+.sec3{
+    position: relative;
+}
+.sec3 .sec3_L{
+    justify-content: right;
+    padding: 100px 50px 0;
+}
+.sec3 .sec3_L .sec3_L_img{
+    margin: 0;
+}
+.sec3 .sec3_R div h2{
+    /* display: none; */
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 266px/2 - 210px);
+}
+.sec3 .sec3_R{
+    padding: 0 50px 20px;
+}
+.sec3 .sec3_R > div{
+    height: 400px;
+    margin: 0;
+}
+.sec3 .sec3_R .sec3_R_img{
+    margin: 0;
+}
+.sec4{
+    background-size: cover;
+    background-position: 50% 50%;
+}

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>두루누비</title>
+    <link rel="stylesheet" type="text/css" href="/css/4durunubi.css">
+    <link rel="stylesheet" media="all and (max-width : 1133px)" href="/css/4durunubit.css">
+    <link rel="stylesheet" media="all and (max-width : 697px)" href="/css/4durunubim.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="top">
+            <div class="L">
+                <a class="menu" href="#">즐겨찾기</a>
+                <a class="menu" href="#">도움말</a>
+                <a class="menu" href="#">앱다운받기</a>
+                <a class="menu" href="#">빅맵다운받기</a>
+            </div>
+            <div class="R">
+                <a class="menu" href="#">로그인</a>
+                <a class="menu" href="#">회원가입</a>
+                <a class="menu lastM" href="#">고객지원</a>
+                <a class="snsIcon" href="#"><img src="/images/4durunubi/페이스북.png" alt="페이스북"></a>
+                <a class="snsIcon" href="#"><img src="/images/4durunubi/블로그.png" alt="블로그"></a>
+                <a class="snsIcon" href="#"><img src="/images/4durunubi/인스타.png" alt="인스타 "></a>
+            </div>
+        </div>
+        <header>
+            <nav class="inner">
+                <a class="rogo" href="#">
+                    <img src="/images/4durunubi/두루누비로고.png" alt="두루누비로고">
+                </a>
+                <div class="nav">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">걷기여행</a>
+                            <ul class="snb">
+                                <li><a href="#">테마별 걷기길</a></li>
+                                <li><a href="#">전문가 추천길</a></li>
+                                <li><a href="#">걷기길 검색</a></li>
+                                <li><a href="#">걷기코스 검색</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">자전거여행</a>
+                            <ul class="snb">
+                                <li><a href="#">테마별 자전거길</a></li>
+                                <li><a href="#">아름다운 자전거 여행길</a></li>
+                                <li><a href="#">전문가 추천길</a></li>
+                                <li><a href="#">자전거길 검색</a></li>
+                                <li><a href="#">자전거코스 검색</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">여행후기</a></li>
+                        <li>
+                            <a href="#">여행안내</a>
+                            <ul class="snb">
+                                <li><a href="#">여행기사</a></li>
+                                <li><a href="#">동영상</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">해파랑길</a></li>
+                        <li><a href="#">남파랑길</a></li>
+                        <li><a href="#">DMZ 평화의 길</a></li>
+                    </ul>
+                    <span class="moreM"><img src="/images/4durunubi/돋보기.png " alt="돋보기"></span>
+                    <span class="moreM"><img src="/images/4durunubi/세줄.png " alt="세줄"></span>
+                </div>
+            </nav>
+        </header>
+        <!-- 상단슬라이드 -->
+        <div class="sec1">
+            <div class="inner">
+                <div class="L">
+                    <div class="banner"></div>
+                    <div class="slide">
+                        <div class="bar"></div>
+                        <div class="slideBt">
+                            <img src="/images/4durunubi/L화살표.png" alt="L화살표">
+                            <p><span>01</span>/01</p>
+                            <img src="/images/4durunubi/R화살표.png" alt="R화살표">
+                            <img src="/images/4durunubi/멈춤.png" alt="멈춤">
+                        </div>
+                    </div> 
+                </div>
+                <div class="R">
+                    <div class="selectBt">
+                        <div class="walkBt">
+                            <div class="on">
+                                <img src="/images/4durunubi/걷기on.png" alt="걷기on">
+                                <span>걷기길</span>
+                            </div>
+                            <div class="off">
+                                <img src="/images/4durunubi/걷기off.png" alt="걷기off">
+                                <span>걷기길</span>
+                            </div>
+                        </div> 
+                        <div class="bikeBt">
+                            <div class="on">
+                                <img src="/images/4durunubi/자전거on.png" alt="자전거on">
+                                <span>자전거길</span>
+                            </div>
+                            <div class="off">
+                                <img src="/images/4durunubi/자전거off.png" alt="자전거off">
+                                <span>자전거길</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="entire">
+                        <p>전체</p>
+                        <div class="bar"></div>
+                        <p>2188개</p>
+                    </div>
+                    <div class="subBt">
+                        <select class="sBt bt1" name="difficulty">
+                            <option value="" selected="selected">난이도</option>
+                            <option value="쉬움">쉬움</option>
+                            <option value="보통">보통</option>
+                            <option value="어려움">어려움</option>
+                        </select>
+                        <select class="sBt bt2" name="distance">
+                            <option value="" selected="selected">거리</option>
+                            <option value="5km미만">5km미만</option>
+                            <option value="5~10km미만">5~10km미만</option>
+                            <option value="10km초과">10km초과</option>
+                        </select>
+                        <select class="sBt bt3" name="difficulty">
+                            <option value="" selected="selected">소요시간</option>
+                            <option value="쉬움">2시간 미만</option>
+                            <option value="보통">2~4시간</option>
+                            <option value="어려움">4시간 초과</option>
+                        </select>
+                    </div>
+                    <div class="map">지도공간</div>
+                    <a class="detailBt" href="#">
+                        걷기 길 상세검색
+                        <span>&#8594;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 배너 -->
+        <div class="sec2">
+            <div class="inner">
+                <a class="menu1" href="#">
+                    <img src="/images/4durunubi/두루누비란.png" alt="두루누비란?">
+                    <p>두루누비란?</p>
+                </a>
+                <a class="menu2" href="#">
+                    <img src="/images/4durunubi/이벤트.png" alt="이벤트">
+                    <p>이벤트</p>
+                </a>
+                <a class="menu3" href="#">
+                    <img src="/images/4durunubi/여행후기.png" alt="여행후기">
+                    <p>여행후기</p>
+                </a>
+                <a class="menu4" href="#">
+                    <img src="/images/4durunubi/자주묻는질문.png" alt="자주묻는질문">
+                    <p>자주묻는질문</p>
+                </a>
+                <a class="menu5" href="#">
+                    <img src="/images/4durunubi/이용가이드.png" alt="이용가이드">
+                    <p>홈페이지<br>이용가이드</p>
+                </a>
+                <a class="menu6" href="#">
+                    <img src="/images/4durunubi/앱다운로드.png" alt="앱다운로드">
+                    <p>앱다운로드</p>
+                </a>
+            </div>
+        </div>
+        <!-- 이달의 추천 길 -->
+        <div class="sec3">
+            <div class="inner">
+                <div class="title">
+                    <img src="/images/4durunubi/추천.png" alt="추천">
+                    <span>이 달의 추천길</span>
+                    <span>알고 걷는 즐거움이 있는 추천길을 찾아가 보세요.</span>
+                </div>
+                <div class="tag">
+                    <span>#역사와 함께하는 길</span>
+                    <a href="#">&#43;</a>
+                </div>
+                <div class="roadList">
+                    <a class="rodeInfo1" href="#">
+                        <img src="/images/4durunubi/석굴암불국사길.png" alt="석굴암불국사">
+                        <div class="level">
+                            <span>걷기</span>
+                            <span>보통</span>
+                        </div>
+                        <div class="info">
+                            <p>[비순환형]</p>
+                            <p>석굴암&#8901;불국사길</p>
+                            <p>#경북 경주시</p>
+                        </div>
+                    </a>
+                    <a class="rodeInfo2" href="#">
+                        <img src="/images/4durunubi/해파랑길8코스.png" alt="해파랑길8코스">
+                        <div class="level">
+                            <span>걷기</span>
+                            <span>보통</span>
+                        </div>
+                        <div class="info">
+                            <p>[비순환형]</p>
+                            <p>해파랑길 8코스</p>
+                            <p>#울산 북구</p>
+                        </div>
+                    </a>
+                    <a class="rodeInfo3" href="#">
+                        <img src="/images/4durunubi/남지개비리길.png" alt="남지개비리길">
+                        <div class="level">
+                            <span>걷기</span>
+                            <span>쉬움</span>
+                        </div>
+                        <div class="info">
+                            <p>[순환형]</p>
+                            <p>남지 개비리길</p>
+                            <p>#경남 창녕군</p>
+                        </div>
+                    </a>
+                    <a class="rodeInfo4" href="#">
+                        <img src="/images/4durunubi/부여사비길.png" alt="부여사비길">
+                        <div class="level">
+                            <span>걷기</span>
+                            <span>보통</span>
+                        </div>
+                        <div class="info">
+                            <p>[순환형]</p>
+                            <p>부여 사비길</p>
+                            <p>#충남 부여군</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 해파랑길/남파랑길 -->
+        <div class= "sec4">
+            <div class="inner">
+                <div class="tap">
+                    <div class="selectBt">
+                        <div class="hBt">
+                            <div class="on">
+                                <img src="/images/4durunubi/해.png" alt="해파랑">
+                                <span>해파랑길</span>
+                            </div>
+                            <div class="off">
+                                <img src="/images/4durunubi/해.png" alt="해파랑">
+                                <span>해파랑길</span>
+                            </div>
+                        </div> 
+                        <div class="nBt">
+                            <div class="on">
+                                <img src="/images/4durunubi/남.png" alt="남파랑">
+                                <span>남파랑길</span>
+                            </div>
+                            <div class="off">
+                                <img src="/images/4durunubi/남.png" alt="남파랑">
+                                <span>남파랑길</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="moreBt">
+                        <a class="ha" href="#">해파랑 구간 더보기</a>
+                        <a class="nam" href="#">남파랑 구간 더보기</a>
+                    </div>
+                </div>
+                <!-- 해파랑길 -->
+                <div class="hcontents">
+                    <a class="conBox box1" href="#">
+                        <img src="/images/4durunubi/해파랑4코스.png" alt="해파랑길 4코스">
+                        <div>
+                            <span>해파랑길 4코스</span>
+                            <p>임랑해변에서 진하해변까지는 부산과 울산의 경계를 넘어...</p>
+                        </div>
+                    </a>
+                    <a class="conBox box2" href="#">
+                        <img src="/images/4durunubi/해파랑3코스.png" alt="해파랑길 3코스">
+                        <div>
+                            <span>해파랑길 3코스</span>
+                            <p>대변항에서 월전까지는 해안도로가 생기기 전에 걸어 다녔던 옛길을 걷는..</p>
+                        </div>
+                    </a>
+                    <a class="conBox box3" href="#">
+                        <img src="/images/4durunubi/해파랑2코스.png" alt="해파랑길 2코스">
+                        <div>
+                            <span>해파랑길 2코스</span>
+                            <p>해운대의 삼포라 불리는 미포, 청사포, 구덕포를 거쳐 대변항에 이르는...</p>
+                        </div>
+                    </a>
+                    <a class="conBox box4" href="#">
+                        <img src="/images/4durunubi/해파랑10코스.png" alt="해파랑길 10코스">
+                        <div>
+                            <span>해파랑길 10코스</span>
+                            <p>울산 정자항을 출발하여 강동해변, 신명해변, 시도간 경계를 지나 경주...</p>
+                        </div>
+                    </a>
+                    <a class="conBox box5" href="#">
+                        <img src="/images/4durunubi/해파랑1코스.png" alt="해파랑길 1코스">
+                        <div>
+                            <span>해파랑길 1코스</span>
+                            <p>해파랑길 전체 770km 중에서 제1선발인 부산은 의외성을 갖는 멋진 길의..</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- 남파랑길 -->
+                <div class="ncontents">
+                    <a class="conBox box1" href="#">
+                        <img src="/images/4durunubi/해파랑4코스.png" alt="남파랑길 4코스">
+                        <div>
+                            <span>남파랑길 4코스</span>
+                            <p>임랑해변에서 진하해변까지는 부산과 울산의 경계를 넘어...</p>
+                        </div>
+                    </a>
+                    <a class="conBox box2" href="#">
+                        <img src="/images/4durunubi/해파랑3코스.png" alt="남파랑길 3코스">
+                        <div>
+                            <span>남파랑길 3코스</span>
+                            <p>대변항에서 월전까지는 해안도로가 생기기 전에 걸어 다녔던 옛길을 걷는..</p>
+                        </div>
+                    </a>
+                    <a class="conBox box3" href="#">
+                        <img src="/images/4durunubi/해파랑2코스.png" alt="남파랑길 2코스">
+                        <div>
+                            <span>남파랑길 2코스</span>
+                            <p>해운대의 삼포라 불리는 미포, 청사포, 구덕포를 거쳐 대변항에 이르는...</p>
+                        </div>
+                    </a>
+                    <a class="conBox box4" href="#">
+                        <img src="/images/4durunubi/해파랑10코스.png" alt="남파랑길 10코스">
+                        <div>
+                            <span>남파랑길 10코스</span>
+                            <p>울산 정자항을 출발하여 강동해변, 신명해변, 시도간 경계를 지나 경주...</p>
+                        </div>
+                    </a>
+                    <a class="conBox box5" href="#">
+                        <img src="/images/4durunubi/해파랑1코스.png" alt="남파랑길 1코스">
+                        <div>
+                            <span>남파랑길 1코스</span>
+                            <p>해파랑길 전체 770km 중에서 제1선발인 부산은 의외성을 갖는 멋진 길의..</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 태그 -->
+        <div class="sec5">
+            <div class="inner">
+                <div class="popTag">
+                    <div class="walkTag">
+                        <p>걷기 인기태그</p>
+                        <div>
+                            <a class="tag" href="#">#단체</a>
+                            <a class="tag" href="#">#역사</a>
+                            <a class="tag" href="#">#기차</a>
+                            <a class="tag" href="#">#산</a>
+                            <a class="tag" href="#">#봄꽃</a>
+                        </div>
+                    </div>
+                    <div class="bikeTag">
+                        <p>자전거 인기태그</p>
+                        <div>
+                            <a class="tag" href="#">#비순환형</a>
+                            <a class="tag" href="#">#버스</a>
+                            <a class="tag" href="#">#가을단풍</a>
+                            <a class="tag" href="#">#순환형</a>
+                            <a class="tag" href="#">#지하철</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ranking">
+                    <p>인기 걷기길</p>
+                    <div>
+                        <a class="rank" href="#">
+                            <span><strong>1</strong>위</span>
+                            <span>해파랑길 1코스</span>
+                        </a>
+                        <a class="rank" href="#">
+                            <span><strong>2</strong>위</span>
+                            <span>서울둘레길 5코스 관악산코스</span>
+                        </a>
+                        <a class="rank" href="#">
+                            <span><strong>3</strong>위</span>
+                            <span>해파랑길 2코스</span>
+                        </a>
+                        <a class="rank" href="#">
+                            <span><strong>4</strong>위</span>
+                            <span>서울둘레길 3코스 고덕·일자산코스</span>
+                        </a>
+                        <a class="rank" href="#">
+                            <span><strong>5</strong>위</span>
+                            <span>서울둘레길 8코스 북한산코스</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="quick">
+                    <a href="#"><img src="/images/4durunubi/여행가이드.png" alt="여행가이드 바로가기"></a>
+                </div>
+            </div>
+        </div>
+        <!-- 게시판 -->
+        <div class="sec6">
+            <div class="L">
+                <div class="Linner">
+                    <div class="title">
+                        <p>이벤트&#8901;행사</p>
+                        <a href="#">&#43;</a>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                2022JTBC 트레일 코리아<span>2022-02-23</span>
+                            </a>
+                        </li> 
+                        <li>
+                        <a href="#">
+                            한국관광공사가 추천하는 걷기여행길 E-Book 댓글 이벤트<span>2021-12-08</span>
+                            </a>
+                        </li> 
+                        <li>
+                        <a href="#">
+                            템플스테이 걷기여행 SNS 콘텐츠 공모전<span>2021-11-11</span>
+                            </a>
+                        </li> 
+                        <li>
+                        <a href="#">
+                            경기 둘레길 개통기념 이벤트<span>2021-10-21</span>
+                            </a>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+            <div class="R">
+                <div class="Rinner">
+                    <div class="title">
+                        <p>공지사항</p>
+                        <a href="#">&#43;</a>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                해파랑길&남파랑길 완보 인증 및 발급방법 안내<span>2021-11-24</span>
+                            </a>
+                        </li> 
+                        <li>
+                        <a href="#">
+                            한국인을 위한 걷기 가이드라인 (만 18세-64세)<span>2021-10-25</span>
+                            </a>
+                        </li> 
+                        <li>
+                        <a href="#">
+                            해파랑길 21코스 일부구간 통행제안 안내<span>2021-04-22</span>
+                            </a>
+                        </li> 
+                        <li>
+                        <a href="#">
+                            [등록안내] 경상남도 밀양시, 밀양강 자전거길<span>2021-04-09</span>
+                            </a>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footerMenu">
+            <div class="inner">
+                <div class="L">
+                    <a href="#">위치기반서비스 이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">회원약관</a>
+                    <a href="#">두루누비소개</a>
+                </div>
+                <select name="familysite">
+                    <option value="" selected="selected">패밀리 사이트 바로가기</option>
+                    <option value="네이버 블로그">네이버 블로그 바로가기</option>
+                    <option value="페이스북">페이스북 바로가기</option>
+                    <option value="인스타그램">인스타그램 바로가기</option>
+                </select>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="inner">
+                <p>(26464) 강원도 원주시 세계로 10 (반곡동) 한국관광공사</p>
+                <p>사업자등록번호 : 202-81-50707 통신판매업신고 : 제2009-서울중구-1234호</p>
+                <p>Copyright by KTO. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

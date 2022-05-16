@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+p{color:darkcyan;}
+#ctxt{color:goldenrod;}
+.txt{color:lightcoral;}
+
+.btxt{color:orange;}
+.atxt{color:blueviolet;}
+.ftxt{font-weight: bold;}
+.atxt.ztxt{
+    color:chartreuse;
+    font-weight: bold;
+}
+
+*{color:black;}

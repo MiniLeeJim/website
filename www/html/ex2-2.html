@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>외부 스타일시트</title>
+    <link rel="stylesheet" type="text/css" href="/css/style2.css">
+</head>
+<body>
+    <p>우리를 기쁘게 하는 것들.</p>
+    <p>
+        스타일을 입력하는 방식에는 내부/외부/인라인이 있다.
+        인라인방식으로 입력되는 스타일이 최우선순위를 가진다.
+        내부에서 작성한 스타일은 모아서 분리를 시킬수 있다. link태그를 이용해서 연결한다. 옵션 rel(관계)/type(문서타입)/href(해당문서가 있는 위치)를 필수로 입력해야한다.
+        에디터에서 쉽게 css를 만드는 방법은, href에 주소를 미리 적어둔다. 존재하지 않지만 그 위치에 있을것이라고 감안하고 적는다. 해당파일링크를 ctrl 누르고 클릭하면 에디터가 생성할것이냐고 묻는다. 그때 만들기.
+        기본방식으로 css만들기. 해당폴더에 css파일을 만들어놓고, html에서 연결하기.
+        css가 신규생성되면, 맨 첫줄에 @charset "UTF-8"; 입력한다.
+    </p>
+
+    <p>안녕</p>
+
+    <!-- <div id="ctxt">CSS중 선택자id값을 가지는 요소</div> -->
+    <span id="ctxt">선택자 id값을 가지는 요소</span>
+
+    <p class="txt">class명을 가지는 요소</p>
+    <span class="txt">class명을 가지는 요소</span>
+
+    <p class="btxt">btxt 클래스</p>
+    <p class="atxt">atxt 클래스</p>
+    <p class="atxt ftxt">중복클래스</p>
+    <p class="atxt ztxt">중복클래스2</p>
+
+
+
+    <p class="btxt atxt">연습</p>
+
+    <p class="btxt etxt">연습2</p>
+
+    <!-- css는 단독으로 선언하고 html에서 중복적용되게 사용할 수 있다. -->
+    <!-- class="클래스명 클래스명" 방식으로 and조건을 나타낸다. -->
+</body>
+</html>
