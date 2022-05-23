@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid pink;
+    /* outline: 1px solid pink; */
     letter-spacing: -0.05em;
     color: var(--main-color);
 }
@@ -133,6 +133,11 @@ header .bottom .ico_hambure{
 }
 
 .sec1 .inner{ position: relative; }
+.sec1 .bnr1{
+    width: 1280px;
+    height: 540px;
+    background: #ddd;
+}
 
 .sec2 .inner{
     display: flex;

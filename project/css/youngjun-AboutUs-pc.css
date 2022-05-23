@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid pink;
+    /* outline: 1px solid pink; */
     letter-spacing: -0.05em;
     color: var(--main-color);
 }
