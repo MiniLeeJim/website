@@ -206,17 +206,18 @@
                 <!-- 공지/정오표 -->
                 <div class="left">
                     <div class="tap">
-                        <h2 class="sec_title notice">공지사항</h2>
-                        <h2 class="sec_title answer">정오표</h2>
+                        <h2 data-id="con1" class="sec_title notice">공지사항</h2>
+                        <h2 data-id="con2" class="sec_title answer">정오표</h2>
                     </div>
                     <div class="list">
-                        <ul class="list_notice">
+                        <ul id="con1" class="list_notice on">
                             <li><a class="notice1" href="#">
                                 <span class="txt">공지1</span><span class="date">0000-00-00</span>
                             </a></li>
                             <li><a class="notice2" href="#">
                                 <span class="txt">공지2</span><span class="date">0000-00-00</span></a></li>
-                            <li><a class="notice3" href="#"><span class="txt">공지3</span><span class="date">0000-00-00</span>
+                            <li><a class="notice3" href="#">
+                                <span class="txt">공지3</span><span class="date">0000-00-00</span>
                             </a></li>
                             <li><a class="notice4" href="#">
                                 <span class="txt">공지4</span><span class="date">0000-00-00</span>
@@ -225,7 +226,7 @@
                                 <span class="txt">공지5</span><span class="date">0000-00-00</span>
                             </a></li> 
                         </ul>
-                        <ul class="list_answer">
+                        <ul id="con2" class="list_answer">
                             <li><a class="answer1" href="#">
                                 <span class="txt">정오표1</span><span class="date">0000-00-00</span>
                             </a></li>
@@ -280,5 +281,8 @@
             </div>
         </footer>
     </div>
+
+    <script src="/www/project/js/jquery-3.6.0.min.js"></script>
+    <script src="/www/project/js/youngjin.js"></script>
 </body>
 </html>
