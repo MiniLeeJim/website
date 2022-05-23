@@ -169,9 +169,61 @@ header .bottom .ico_hambure{ display: none; }
 .sec2{
     height: 500px;
     padding: 0 80px 0;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    border-bottom: 4px solid #939393;
+}
+.sec2 .img_book{
+    width: 320px;
+    height: 384px;
+    background: #ddd;
+}
+.sec2 .box_word{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.sec2 .box_info{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.sec2 .box_info .info_title{
+    display: inline-block;
+    width: 120px;
+}
+.sec2 .box_word > div:last-child{
+    margin: 30px 0 0 0;
+    display: flex;
+    gap: 30px;
+}
+.sec2 .box_word .bt{
+    padding: 12px 40px;
+    border: 1px solid #000;
 }
 
-.sec3{ height: 100%; }
+.sec3{
+    height: 100%;
+    padding: 0 0 0 25px;
+}
+.sec3 .title{
+    padding: 40px 0 5px 0;
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+}
+.sec3 .title .img_pre{
+    width: 45px;
+    height: 45px;
+    background: #ddd;
+}
+.sec3 .box_word{
+    padding: 20px 20px 20px 15px;
+}
+.sec3 .intro_index{
+    padding: 0 0 100px 0;
+}
 
 footer .inner{ display: flex; justify-content: space-between; }
 footer .left{
