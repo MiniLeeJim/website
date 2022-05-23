@@ -105,6 +105,9 @@ header .bottom .gnb > li:hover > .lnb{
     transform: translateY(0%);
     transition: all 0.5s;
 }
+header .bottom .lnb > li:hover{
+    background: #ddd;
+}
 header .bottom .menu{
     display: flex;
     align-items: center;
