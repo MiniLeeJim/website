@@ -19,6 +19,8 @@ var bannerSwiper = new Swiper(".sec1 .inner", {
 });
 
 //sec3 신규도서
+const newBook = document.querySelectorAll(".slide_book_info");
+
 var newbookSwiper = new Swiper(".sec3 .book-slide", {
     loop: true,
     effect: "coverflow",
@@ -35,6 +37,23 @@ var newbookSwiper = new Swiper(".sec3 .book-slide", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+    on: {
+        activeIndexChange: function () {
+            if(this.realIndex == 0){
+                newBook[0].classList.add("on");
+                newBook[1].classList.remove("on");
+                newBook[2].classList.remove("on");
+            } else if(this.realIndex == 1){
+                newBook[0].classList.remove("on");
+                newBook[1].classList.add("on");
+                newBook[2].classList.remove("on");
+            } else{
+                newBook[0].classList.remove("on");
+                newBook[1].classList.remove("on");
+                newBook[2].classList.add("on");
+            }
+        }
     }
 });
 
@@ -59,7 +78,9 @@ var bestbookSwiper = new Swiper(".sec4 .book-slide", {
 });
 
 //공지, 정오 탭
-$(".sec5 .tap > h2").click(function(){
-    $(this).addClass('on').siblings().removeClass('on');
-    $("#"+$(this).data('id')).addClass('on').siblings().removeClass('on');
+$(document).ready(function(){
+    $(".sec5 .tap > h2").click(function(){
+        $(this).addClass('on').siblings().removeClass('on');
+        $("#"+$(this).data('id')).addClass('on').siblings().removeClass('on');
+    });
 });

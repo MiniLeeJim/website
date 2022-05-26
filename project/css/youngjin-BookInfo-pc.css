@@ -25,14 +25,16 @@
 
 li{ list-style-type: none; }
 a{ text-decoration: none; }
-address{ font:var(--footer-font); }
+.book_title,
+.sec3 .title > p{ font: var(--sec-title-font); }
+address{ font: var(--footer-font); }
 .sub_title{/* 나타나는 순간 sec1 space-between*/
     display: none;
 }
 
 header{ width: 100%; height: 160px; background-color: #fff; border-bottom: 2px solid #eee; }
 .contents{ width: 100%; height: 100%; }
-footer{ width: 100%; height: 200px; }
+footer{ width: 100%; height: 200px; background: #ddd;}
 .inner{ width: 1280px; height: 100%; margin: 0 auto;}
 
 header .inner{ display: flex; flex-direction: column; }
@@ -50,8 +52,8 @@ header .top{
 header .top .img_logo{
     width: 230px;
     height: 80px;
-    background: #ddd;
     margin: 0 0 5px;
+    background: url(/www/project/images/영진닷컴.svg) 50% 100% no-repeat;
 }
 header .top .menu{
     display: flex;
@@ -195,7 +197,9 @@ header .bottom .ico_hambure{ display: none; }
 .sec2 .box_info .info_title{
     display: inline-block;
     width: 120px;
+    font: var(--info-font);
 }
+.sec2 .box_info .info{ font: var(--info-font); }
 .sec2 .box_word > div:last-child{
     margin: 30px 0 0 0;
     display: flex;
@@ -204,11 +208,15 @@ header .bottom .ico_hambure{ display: none; }
 .sec2 .box_word .bt{
     padding: 12px 40px;
     border: 1px solid #000;
+    font: var(--list-font);
 }
 
 .sec3{
     height: 100%;
-    padding: 0 0 0 25px;
+    padding: 50px 0 200px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
 }
 .sec3 .title{
     padding: 40px 0 5px 0;
@@ -223,12 +231,14 @@ header .bottom .ico_hambure{ display: none; }
 }
 .sec3 .box_word{
     padding: 20px 20px 20px 15px;
-}
-.sec3 .intro_index{
-    padding: 0 0 100px 0;
+    font: var(--info-font);
+    line-height: 28px;
 }
 
-footer .inner{ display: flex; justify-content: space-between; }
+footer .inner{
+    display: flex;
+    justify-content: space-between;
+}
 footer .left{
     width: 260px;
     display: flex;
@@ -238,7 +248,7 @@ footer .left{
 footer .left .img_logo{
     width: 230px;
     height: 80px;
-    background: #ddd;
+    background: url(/www/project/images/영진닷컴.svg) 50% 50% no-repeat;
 }
 footer .right{
     width: 940px;

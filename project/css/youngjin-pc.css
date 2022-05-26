@@ -34,8 +34,8 @@ header{ width: 100%; height: 160px; background-color: #fff; border-bottom: 2px s
 .sec2{ width: 100%; height: 200px; }
 .sec3{ width: 100%; height: 550px; }
 .sec4{ width: 100%; height: 650px; }
-.sec5{ width: 100%; height: 460px; }
-footer{ width: 100%; height: 200px; }
+.sec5{ width: 100%; height: 500px; }
+footer{ width: 100%; height: 200px; background: #ddd;}
 .inner{ width: 1280px; height: 100%; margin: 0 auto; display: flex;}
 
 header .inner{ flex-direction: column; }
@@ -53,8 +53,8 @@ header .top{
 header .top .img_logo{
     width: 230px;
     height: 80px;
-    background: #ddd;
     margin: 0 0 5px;
+    background: url(/www/project/images/영진닷컴.svg) 50% 100% no-repeat;
 }
 header .top .menu{
     display: flex;
@@ -137,11 +137,28 @@ header .bottom .ico_hambure{
     display: none;
 }
 
-.sec1 .inner{ position: relative; }
-.sec1 .bnr1{
-    width: 1280px;
-    height: 540px;
+/* .sec1 .inner{ 
+    overflow: hidden;
+} */
+.sec1 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
     background: #ddd;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    
 }
 
 .sec2 .inner{
@@ -188,6 +205,12 @@ header .bottom .ico_hambure{
     flex-direction: column;
     padding: 30px 20px;
 }
+.sec3 .bottom .left .slide_book_info{
+    display: none;
+}
+.sec3 .bottom .left .slide_book_info.on{
+    display: block;
+}
 .sec3 .bottom .left .info > span{
     display: inline-block;
     margin: 15px 0;
@@ -205,19 +228,24 @@ header .bottom .ico_hambure{
 .sec3 .bottom .left .summary{
     font: var(--book-summary-font);
 }
-.sec3 .bottom .right{
-    width: 800px;
-    position: relative;
+.sec3 .bottom .swiper{
+    width: 720px;
+    padding: 50px 0;
 }
-.sec3 .bottom .right .slide_book{
-    position: absolute;
-    display: block;
-    width: 100%;
+.sec3 .bottom .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 280px;
     height: 336px;
-    top: calc(50% - 336px/2);
-    /* left: calc(50% - 320px/2); */
+}
+.sec3 .bottom .book1{
+    background: #eee;
+}
+.sec3 .bottom .book2{
     background: #ddd;
-    z-index: 1;
+}
+.sec3 .bottom .book3{
+    background: #ccc;
 }
 
 .sec4 .inner{ flex-direction: column; }
@@ -238,34 +266,38 @@ header .bottom .ico_hambure{
     height: 570px;
     justify-content: space-between;
 }
-.sec4 .bottom .left{
-    width: 800px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.sec4 .bottom .swiper{
+    width: 720px;
+    padding: 50px 0;
 }
-.sec4 .bottom .left .slide_book{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.sec4 .bottom .swiper-slide{
+    width: 280px;
+    height: 100%;
+    background-color: #fff;
 }
-.sec4 .bottom .left .slide_book .img_book{
-    width: 800px;
-    /* width: 280px; */
+.sec4 .bottom .swiper-slide .img_book{
+    display: block;
+    width: 280px;
     height: 336px;
     margin: 0 0 10px;
     background: #ddd;
+}
+.sec4 .bottom .swiper-slide > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 .sec4 .bottom .right{
     width: 400px;
     display: flex;
     align-items: center;
 }
-.sec4 .bottom .right .youtube{
+.sec4 .bottom .right .youtube > iframe{
     width: 400px;
     height: 270px;
     background: #ddd;
+    display: block;
 }
 .sec5 .inner{ justify-content: space-between;}
 .sec5 .left{
@@ -308,13 +340,18 @@ header .bottom .ico_hambure{
     display: flex;
     align-items: flex-end;
     height: 90px;
-    padding: 0 0 0 10px;
+    padding: 0 0 10px 10px;
 }
-.sec5 .right .widget{
-    height: 300px;
+.sec5 .right .fb-page{
+    margin: auto;
+    width: 450px;
+    height: 370px;
 }
 
-footer .inner{ justify-content: space-between; }
+footer .inner{
+    display: flex;
+    justify-content: space-between;
+}
 footer .left{
     width: 260px;
     display: flex;
@@ -324,7 +361,7 @@ footer .left{
 footer .left .img_logo{
     width: 230px;
     height: 80px;
-    background: #ddd;
+    background: url(/www/project/images/영진닷컴.svg) 50% 50% no-repeat;
 }
 footer .right{
     width: 940px;
