@@ -1,0 +1,58 @@
+.inner{width: 100%;}
+header .bottom{ justify-content: flex-end; }
+header .bottom .ico_hambure.on{ display: block; }
+
+.iw_overlay.on{
+    display: block;
+}
+
+nav{
+    width: 520px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 200;
+    background: #fff;
+    display: none;
+}
+nav.on{ display: block; }
+
+nav > .mbt_close.on{
+    display: block;
+}
+
+header .bottom .gnb{
+    width: 100%;
+    height: auto;
+    margin: 100px 0 0 0;
+    display: block;
+}
+header .bottom .gnb > li > a{
+    padding: 0 0 0 50px;
+    position: static;
+}
+header .bottom .lnb{
+    width: 100%;
+    position: relative;
+    transform: none;
+    transition: none;
+    box-shadow: none;
+    background: #eee;
+}
+header .bottom .lnb > li > a,
+header .bottom .gnb > li:nth-child(3) > .lnb > li > a{ padding: 0 0 0 60px; }
+header .bottom .gnb > li:hover > .lnb{
+    transform: none;
+    transition: none;
+}
+
+header .bottom .menu{
+    display: flex;
+    align-items: center;
+    gap: 0px 30px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+    background: #fff;
+}

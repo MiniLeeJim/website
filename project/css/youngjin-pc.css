@@ -36,7 +36,30 @@ header{ width: 100%; height: 160px; background-color: #fff; border-bottom: 2px s
 .sec4{ width: 100%; height: 650px; }
 .sec5{ width: 100%; height: 500px; }
 footer{ width: 100%; height: 200px; background: #ddd;}
-.inner{ width: 1280px; height: 100%; margin: 0 auto; display: flex;}
+.inner{ max-width: 1280px; height: 100%; margin: 0 auto; display: flex;}
+
+.iw_overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background: rgba(100, 100, 100, 0.3);
+    display: none;
+}
+
+.mbt_close{
+    width: 50px;
+    height: 50px;
+    background: #ddd;
+    margin: 20px;
+    position: absolute;
+    left: -100px;
+    top: 50px;
+    cursor: pointer;
+    display: none;
+}
 
 header .inner{ flex-direction: column; }
 header .top{
@@ -132,8 +155,10 @@ header .bottom .ico_hambure{
     width: 50px;
     height: 50px;
     cursor: pointer;
+    background: #ddd;
 }
-header .bottom .ico_hambure{
+header .bottom .ico_hambure
+{
     display: none;
 }
 
@@ -385,7 +410,7 @@ footer .right .top .site{
 footer .right .top .ico{
     width: 50px;
     height: 50px;
-    background: #ddd;
+    background: #aaa;
 }
 footer .right .bottom{
     height: 125px;

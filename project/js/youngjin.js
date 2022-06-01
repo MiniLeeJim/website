@@ -1,4 +1,4 @@
-//sec1 배너
+//배너 슬라이드
 var bannerSwiper = new Swiper(".sec1 .inner", {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -18,7 +18,7 @@ var bannerSwiper = new Swiper(".sec1 .inner", {
     }
 });
 
-//sec3 신규도서
+//신규도서 슬라이드
 const newBook = document.querySelectorAll(".slide_book_info");
 
 var newbookSwiper = new Swiper(".sec3 .book-slide", {
@@ -57,7 +57,7 @@ var newbookSwiper = new Swiper(".sec3 .book-slide", {
     }
 });
 
-//이기적 베스트
+//이기적 베스트 슬라이드
 var bestbookSwiper = new Swiper(".sec4 .book-slide", {
     loop: true,
     effect: "coverflow",
@@ -77,10 +77,53 @@ var bestbookSwiper = new Swiper(".sec4 .book-slide", {
     }
 });
 
-//공지, 정오 탭
 $(document).ready(function(){
+    //공지, 정오 탭
     $(".sec5 .tap > h2").click(function(){
-        $(this).addClass('on').siblings().removeClass('on');
-        $("#"+$(this).data('id')).addClass('on').siblings().removeClass('on');
+        $(this).addClass("on").siblings().removeClass("on");
+        $("#"+$(this).data("id")).addClass("on").siblings().removeClass('on');
     });
+
+    //반응형
+    //처음 로딩 화면이 1200 미만일때
+    if($(window).width() < 1200){
+        $(".ico_hambure").addClass("on");
+    };
+    //후에 1200 미만으로 줄이거나 이상으로 늘릴때
+    $(window).resize(function(){
+        if($(window).width() < 1200){
+            $(".ico_hambure").addClass("on");
+        } else{
+            $(".gnb > li > ul").show();
+            $(".ico_hambure").removeClass("on");
+            $("nav").removeClass("on");
+            $(".gnb > li > a").unbind();
+            $(".iw_overlay").removeClass("on");
+        }
+    });
+    //햄버거를 눌렀을때
+    $(".ico_hambure").click(function(){
+        $("nav").addClass("on");
+        $(".gnb > li > a").click(function(e){
+            e.preventDefault();
+        });
+        if($("nav").hasClass("on")){
+            $(".gnb > li > ul").hide();
+            $(".gnb > li").click(function() {
+                $(this).find("ul").stop().slideToggle();
+            });
+        };
+        $(".iw_overlay").addClass("on");
+        //나브 닫기 버튼
+        $(".mbt_close").addClass("on");   
+    });
+    $(".mbt_close").click(function(){
+            $("nav").removeClass("on");
+            $(".mbt_close").removeClass("on");
+            $(".iw_overlay").removeClass("on");
+    });  
 });
+
+
+
+
