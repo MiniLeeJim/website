@@ -2,9 +2,7 @@
 header .bottom{ justify-content: flex-end; }
 header .bottom .ico_hambure.on{ display: block; }
 
-.iw_overlay.on{
-    display: block;
-}
+.iw_overlay.on{ display: block; }
 
 nav{
     width: 520px;
@@ -16,16 +14,26 @@ nav{
     background: #fff;
     display: none;
 }
-nav.on{ display: block; }
-
-nav > .mbt_close.on{
-    display: block;
+nav > .mtop{
+    width: 100%;
+    height: 180px;
+    padding: 20px 20px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #eee;
 }
+nav .mlogo{
+    width: 230px;
+    height: 80px;
+    background: url(/www/project/images/영진닷컴.svg) no-repeat center;
+}
+nav.on{ display: block; }
+nav > .mbt_close.on{ display: block; }
 
 header .bottom .gnb{
     width: 100%;
     height: auto;
-    margin: 100px 0 0 0;
+    margin: 20px 0 0 0;
     display: block;
 }
 header .bottom .gnb > li > a{
@@ -45,14 +53,4 @@ header .bottom .gnb > li:nth-child(3) > .lnb > li > a{ padding: 0 0 0 60px; }
 header .bottom .gnb > li:hover > .lnb{
     transform: none;
     transition: none;
-}
-
-header .bottom .menu{
-    display: flex;
-    align-items: center;
-    gap: 0px 30px;
-    padding: 0 20px;
-    position: relative;
-    z-index: 10;
-    background: #fff;
 }

@@ -52,7 +52,7 @@ footer{ width: 100%; height: 200px; background: #ddd;}
 .mbt_close{
     width: 50px;
     height: 50px;
-    background: #ddd;
+    background: url(/www/project/images/cancel_FILL1_wght700_GRAD200_opsz48.svg) no-repeat center / cover;
     margin: 20px;
     position: absolute;
     left: -100px;
@@ -155,16 +155,16 @@ header .bottom .ico_hambure{
     width: 50px;
     height: 50px;
     cursor: pointer;
-    background: #ddd;
 }
-header .bottom .ico_hambure
-{
+header .bottom .ico_search{
+    background: url(/www/project/images/search_FILL0_wght400_GRAD0_opsz48.svg) no-repeat center / 45px 45px;}
+header .bottom .ico_mypage{
+    background: url(/www/project/images/person_filled_FILL0_wght400_GRAD0_opsz48.svg) no-repeat center; }
+header .bottom .ico_hambure{
+    background: url(/www/project/images/menu_FILL0_wght700_GRAD200_opsz40.svg) no-repeat center / 40px 40px;
     display: none;
 }
 
-/* .sec1 .inner{ 
-    overflow: hidden;
-} */
 .sec1 .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -183,7 +183,6 @@ header .bottom .ico_hambure
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    
 }
 
 .sec2 .inner{
@@ -192,13 +191,12 @@ header .bottom .ico_hambure
     align-items: flex-start;
     padding: 30px 0 0;
 }
+.sec2 .menu_quick { width: 125px; }
 .sec2 .menu_quick > p{
     text-align: center;
     font: var(--quickMenu-title-font);
 }
-.sec2 .menu_quick > p > span{
-    font-size: 16px;
-}
+.sec2 .menu_quick > p > span{ font-size: 16px; }
 .sec2 .ico{
     margin: 0 auto;
     width: 100px;
@@ -264,13 +262,13 @@ header .bottom .ico_hambure
     height: 336px;
 }
 .sec3 .bottom .book1{
-    background: #eee;
+    background: url(/www/project/images/00책-정보처리산업기사실기.png) no-repeat center / contain;
 }
 .sec3 .bottom .book2{
-    background: #ddd;
+    background: url(/www/project/images/00책-정보처리산업기사실기.png) no-repeat center / contain;
 }
 .sec3 .bottom .book3{
-    background: #ccc;
+    background: url(/www/project/images/00책-정보처리산업기사실기.png) no-repeat center / contain;
 }
 
 .sec4 .inner{ flex-direction: column; }
@@ -367,10 +365,13 @@ header .bottom .ico_hambure
     height: 90px;
     padding: 0 0 10px 10px;
 }
-.sec5 .right .fb-page{
+
+.sec5 .right iframe{
     margin: auto;
     width: 450px;
     height: 370px;
+    border: none;
+    overflow: hidden;
 }
 
 footer .inner{

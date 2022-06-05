@@ -19,14 +19,13 @@ var bannerSwiper = new Swiper(".sec1 .inner", {
 });
 
 //신규도서 슬라이드
-const newBook = document.querySelectorAll(".slide_book_info");
+const NEWBOOK = document.querySelectorAll(".slide_book_info");
 
 var newbookSwiper = new Swiper(".sec3 .book-slide", {
     loop: true,
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: "auto",
     coverflowEffect: {
         rotate: 0,
         stretch: 0,
@@ -38,20 +37,25 @@ var newbookSwiper = new Swiper(".sec3 .book-slide", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        931: {
+          slidesPerView: 3,
+        },
+    },
     on: {
         activeIndexChange: function () {
             if(this.realIndex == 0){
-                newBook[0].classList.add("on");
-                newBook[1].classList.remove("on");
-                newBook[2].classList.remove("on");
+                NEWBOOK[0].classList.add("on");
+                NEWBOOK[1].classList.remove("on");
+                NEWBOOK[2].classList.remove("on");
             } else if(this.realIndex == 1){
-                newBook[0].classList.remove("on");
-                newBook[1].classList.add("on");
-                newBook[2].classList.remove("on");
+                NEWBOOK[0].classList.remove("on");
+                NEWBOOK[1].classList.add("on");
+                NEWBOOK[2].classList.remove("on");
             } else{
-                newBook[0].classList.remove("on");
-                newBook[1].classList.remove("on");
-                newBook[2].classList.add("on");
+                NEWBOOK[0].classList.remove("on");
+                NEWBOOK[1].classList.remove("on");
+                NEWBOOK[2].classList.add("on");
             }
         }
     }
@@ -85,42 +89,41 @@ $(document).ready(function(){
     });
 
     //반응형
+    // mnav동작 함수
+    function mnav() {
+        $("nav").addClass("on");
+        $(".gnb > li > a").unbind("click").click(function(e) {
+            // 슬라이드토글이 두번 콜링되어 고장나는 경우 처리
+            $(this).next("ul").stop().slideToggle();
+            $(".gnb > li > a").not(this).next("ul").slideUp();
+            e.preventDefault();
+        });
+        $(".iw_overlay, .mbt_close").addClass("on");
+    };
+
     //처음 로딩 화면이 1200 미만일때
     if($(window).width() < 1200){
         $(".ico_hambure").addClass("on");
+        $(".gnb > li > ul").slideUp();
+        //햄버거를 눌렀을때
+        $(".ico_hambure").click(mnav);
     };
     //후에 1200 미만으로 줄이거나 이상으로 늘릴때
     $(window).resize(function(){
         if($(window).width() < 1200){
             $(".ico_hambure").addClass("on");
+            $(".gnb > li > ul").slideUp();
+            $(".ico_hambure").click(mnav);
         } else{
-            $(".gnb > li > ul").show();
-            $(".ico_hambure").removeClass("on");
-            $("nav").removeClass("on");
+            $("nav, .ico_hambure, .iw_overlay").removeClass("on");
             $(".gnb > li > a").unbind();
-            $(".iw_overlay").removeClass("on");
+            $(".gnb > li > ul").slideDown();
         }
     });
-    //햄버거를 눌렀을때
-    $(".ico_hambure").click(function(){
-        $("nav").addClass("on");
-        $(".gnb > li > a").click(function(e){
-            e.preventDefault();
-        });
-        if($("nav").hasClass("on")){
-            $(".gnb > li > ul").hide();
-            $(".gnb > li").click(function() {
-                $(this).find("ul").stop().slideToggle();
-            });
-        };
-        $(".iw_overlay").addClass("on");
-        //나브 닫기 버튼
-        $(".mbt_close").addClass("on");   
-    });
+    //mnav 클로즈버튼을 누를때
     $(".mbt_close").click(function(){
-            $("nav").removeClass("on");
-            $(".mbt_close").removeClass("on");
-            $(".iw_overlay").removeClass("on");
+        $("nav, .mbt_close, .iw_overlay").removeClass("on");
+        $(".gnb > li > ul").slideUp();
     });  
 });
 
