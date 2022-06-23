@@ -28,7 +28,7 @@ $(function() {
     }
     //헤더 나브로 이동
     $('ul.lnb1 li > a').each(function() {
-        $(this).click(function() {
+        $(this).on("click", function() {
             const thisHash = $(this).attr('href');
             const thisHashTrim = thisHash.substr(thisHash.length-5,5);
             const thisHashNum = Number(thisHash.substr(thisHash.length-1,1)) - 1;
@@ -42,17 +42,29 @@ $(function() {
             $(".sec1 .mini_title").text($(this).text());
         });
     });
-    //윈도우 크기에 맞춰 snb/subTitle 변경
-    if($(window).width() < 1600){
+
+    //snb/subTitle 변경 함수
+    function subTitle() {
         $(".snb").addClass('out');
         $(".sec1 .sub_title").text($(".snb li.on").text());
         $(".sec1 .sub_title").addClass('on');
-    }
-    $( window ).resize(function() {
-        if($(window).width() < 1600){
-            $(".snb").addClass('out');
-            $(".sec1 .sub_title").text($(".snb li.on").text());
-            $(".sec1 .sub_title").addClass('on');
+    };
+    //500에 path 감추기 함수
+    function closePath() {
+        if($(window).width() <= 500){
+            $(".sec1 .path").css("display", "none");
+        } else { $(".sec1 .path").removeAttr("style"); }
+    };
+
+    //윈도우 크기에 맞춰 snb/subTitle 변경
+    if($(window).width() <= 1600){
+        subTitle();
+        closePath();
+    };
+    $(window).on("resize", function() {
+        if($(window).width() <= 1600){
+            subTitle();
+            closePath();
         }
         else {
             $(".snb").removeClass('out');
@@ -72,17 +84,27 @@ $(function() {
         });
         $(".iw_overlay, .mbt_close").addClass("on");
     };
-    //처음 로딩 화면이 1200 미만일때
-    if($(window).width() < 1200){
+    
+    //mnav 클로즈버튼을 누를때
+    $(".mbt_close").on("click", function(){
+        $("nav, .mbt_close, .iw_overlay").removeClass("on");
+        $(".gnb > li > ul").slideUp();
+    });  
+
+    //처음 로딩 화면 사이즈 관련
+    if($(window).width() <= 1200){
+        //1200 이하
+        //mnav
         $(".ico_hambure").addClass("on");
         $(".gnb > li > ul").slideUp();
-        //햄버거를 눌렀을때
         $(".ico_hambure").click(mnav);
     };
 
-    //후에 1200 미만으로 줄이거나 이상으로 늘릴때
-    $(window).resize(function(){
-        if($(window).width() < 1200){
+    //첫 로딩 후 화면 사이즈를 바꿀때
+    $(window).on("resize", function(){
+        //1200이하
+        if($(window).width() <= 1200){
+            //mnav
             $(".ico_hambure").addClass("on");
             $(".gnb > li > ul").slideUp();
             $(".ico_hambure").click(mnav);
@@ -92,10 +114,6 @@ $(function() {
             $(".gnb > li > ul").slideDown();
         }
     });
-    $(".mbt_close").click(function(){
-        $("nav, .mbt_close, .iw_overlay").removeClass("on");
-        $(".gnb > li > ul").slideUp();
-    });  
 });
 
 //탭전환
