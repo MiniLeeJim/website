@@ -14,6 +14,7 @@
     --main-color : #353535;
     --green-color : #47811A;
     --rad-color : #C80000;
+    --hf-bg-color : #E9EEF0;
     --top-title-font : 400 16px 'Inter';
     --nav-font : 400 20px 'Inter';
     --sec-title-font : 700 26px 'Inter';
@@ -27,11 +28,10 @@ li{ list-style-type: none; }
 a{ text-decoration: none; }
 .book_title,
 .sec3 .title > p{ font: var(--sec-title-font); }
-address{ font: var(--footer-font); }
 
-header{ width: 100%; height: 160px; background-color: #fff; border-bottom: 2px solid #eee; }
+header{ width: 100%; height: 160px; background-color: var(--hf-bg-color); }
 .contents{ width: 100%; height: 100%; }
-footer{ width: 100%; height: 200px; background: #ddd;}
+footer{ width: 100%; height: 200px; background: var(--hf-bg-color);}
 .inner{ max-width: 1280px; height: 100%; margin: 0 auto;}
 
 .iw_overlay{
@@ -48,7 +48,7 @@ footer{ width: 100%; height: 200px; background: #ddd;}
 .mbt_close{
     width: 50px;
     height: 50px;
-    background: #ddd;
+    background: url(/www/project/images/cancel_FILL1_wght700_GRAD200_opsz48.svg) no-repeat center / cover;
     margin: 20px;
     position: absolute;
     left: -100px;
@@ -56,6 +56,7 @@ footer{ width: 100%; height: 200px; background: #ddd;}
     cursor: pointer;
     display: none;
 }
+.mtop, .mbottom{ display: none; }
 
 header .inner{ display: flex; flex-direction: column; }
 header .top{
@@ -63,8 +64,8 @@ header .top{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0 10px;
-    background: #fff;
+    padding: 0 30px;
+    background: var(--hf-bg-color);
     position: relative;
     z-index: 20;
     font : var(--top-title-font);
@@ -73,24 +74,33 @@ header .top .img_logo{
     width: 230px;
     height: 80px;
     margin: 0 0 5px;
-    background: url(/www/project/images/영진닷컴.svg) 50% 100% no-repeat;
+    background: url(/www/project/images/영진닷컴.svg) no-repeat center / contain;
 }
 header .top .menu{
     display: flex;
     align-items: center;
     margin: 0 0 10px;
 }
+header .top .menu .text:hover{ color: #000 }
 header .top .menu > div{
     width: 1px;
     height: 15px;
-    background-color: #000;
+    background-color: var(--main-color);
     margin: 0 10px;
+}
+header .top > .ico_hambure{
+    width: 50px;
+    height: 50px;
+    margin: 0 0 10px 0;
+    cursor: pointer;
+    background: url(/www/project/images/menu.svg) no-repeat center;
+    display: none;
 }
 header .bottom{
     height: 70px;
     display: flex;
     justify-content: center;
-    background: #fff;
+    background: var(--hf-bg-color);
 }
 header .bottom .gnb{
     height: 70px;
@@ -105,7 +115,7 @@ header .bottom .gnb > li > a{
     padding: 0 50px 0;
     position: relative;
     z-index: 25;
-    background: #fff;
+    background: var(--hf-bg-color);
     font: var(--nav-font);
     line-height: 70px;
 }
@@ -115,11 +125,9 @@ header .bottom .lnb{
     z-index: 10;
     transition: all 0.5s;
     background: #fff;
-    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 0px var(--hf-bg-color);
 }
-header .bottom .lnb > li{
-    height: 50px;
-}
+header .bottom .lnb > li{ height: 50px; }
 header .bottom .lnb > li > a{
     display: block;
     padding: 0 25px;
@@ -133,9 +141,7 @@ header .bottom .gnb > li:hover > .lnb{
     transform: translateY(0%);
     transition: all 0.5s;
 }
-header .bottom .lnb > li:hover{
-    background: #ddd;
-}
+header .bottom .lnb > li:hover{ background: var(--hf-bg-color); }
 header .bottom .menu{
     display: flex;
     align-items: center;
@@ -143,24 +149,26 @@ header .bottom .menu{
     padding: 0 20px;
     position: relative;
     z-index: 10;
-    background: #fff;
+    background: var(--hf-bg-color);
 }
-header .bottom .ico_search,
-header .bottom .ico_mypage,
-header .bottom .ico_hambure{
+.ico_search,
+.ico_mypage{
     width: 50px;
     height: 50px;
     cursor: pointer;
-    background: #ddd;
 }
-header .bottom .ico_hambure{ display: none; }
+.ico_search{
+    background: url(/www/project/images/검색.svg) no-repeat center / 45px 45px;
+}
+.ico_mypage{
+    background: url(/www/project/images/person_FILL0_wght700_GRAD0_opsz48.svg) no-repeat center / 35px 35px;
+}
 
 .sec1{
     width: 100%;
     height: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: flex-end;
     justify-content: space-between;
     align-items: flex-end;
     border-bottom: 4px solid #939393;
@@ -203,15 +211,16 @@ header .bottom .ico_hambure{ display: none; }
     letter-spacing: -0.2em;
     font-size: 16px;
 }
-.snb li:hover{ background: #ddd; }
+.snb li:hover{ background: var(--hf-bg-color);}
 .snb li.on { 
     font-weight: 700;
-    background: #ddd; }
+    background: var(--hf-bg-color); }
 .snb.out{
     display: none;
 }
 
 .sec2{
+    width: 100%;
     height: 500px;
     padding: 0 80px 0;
     display: flex;
@@ -225,6 +234,7 @@ header .bottom .ico_hambure{ display: none; }
     background: #ddd;
 }
 .sec2 .box_word{
+    width: 320px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -234,16 +244,21 @@ header .bottom .ico_hambure{ display: none; }
     flex-direction: column;
     gap: 16px;
 }
+.sec2 .box_info > div{ display: flex; }
 .sec2 .box_info .info_title{
-    display: inline-block;
-    width: 120px;
+    display: block;
+    width: 30%;
     font: var(--info-font);
 }
-.sec2 .box_info .info{ font: var(--info-font); }
+.sec2 .box_info .info{
+    display: block;
+    width: 70%;
+    font: var(--info-font);
+}
 .sec2 .box_word > div:last-child{
     margin: 30px 0 0 0;
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
 }
 .sec2 .box_word .bt{
     padding: 12px 40px;
@@ -261,19 +276,21 @@ header .bottom .ico_hambure{ display: none; }
 .sec3 .title{
     padding: 40px 0 5px 0;
     display: flex;
-    gap: 20px;
-    align-items: flex-end;
+    gap: 25px;
+    align-items: center;
 }
 .sec3 .title .img_pre{
     width: 45px;
     height: 45px;
-    background: #ddd;
 }
 .sec3 .box_word{
     padding: 20px 20px 20px 15px;
     font: var(--info-font);
     line-height: 28px;
 }
+.intro_book .img_pre{ background: url(/www/project/images/book.svg) no-repeat center; }
+.intro_writer .img_pre{ background: url(/www/project/images/pen.svg) no-repeat center; }
+.intro_index .img_pre{ background: url(/www/project/images/bookmark.svg) no-repeat center; }
 
 footer .inner{
     display: flex;
@@ -286,6 +303,7 @@ footer .left{
     justify-content: center;
 }
 footer .left .img_logo{
+    display: block;
     width: 230px;
     height: 80px;
     background: url(/www/project/images/영진닷컴.svg) 50% 50% no-repeat;
@@ -295,25 +313,44 @@ footer .right{
     display: flex;
     flex-direction: column;
     padding: 0 0 0 30px;
+    font: var(--footer-font);
 }
+footer .right address{ font: var(--footer-font); }
 footer .right .top{
     height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
-footer .right .top .menu > a {
-    margin: 0 20px 0 0;
+footer .right .top .menu{
+    display: flex;
+    gap: 20px;
 }
+footer .right .top .menu > a:hover{ color: #000; }
 footer .right .top .site{
     display: flex;
     gap: 10px;
 }
-footer .right .top .ico{
+footer .right .top .site > .ico{
     width: 50px;
     height: 50px;
-    background: #ddd;
 }
+footer .right .top .site > .ico > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(/www/project/images/snslogo.svg) no-repeat center/ cover;
+}
+footer .right .top .site > .cafe > a{ background-position: -302px 2px; }
+footer .right .top .site > .blog > a{ background-position: -182px 2px; }
+footer .right .top .site > .star > a{ background-position: -2px 2px; }
+footer .right .top .site > .face > a{ background-position: -62px 2px; }
+footer .right .top .site > .yutube > a{ background-position: -242px 2px; }
+footer .right .top .site > .ico > a:hover{
+    transform: scale(1.02, 1.02);
+    opacity: 0.8;
+}
+
 footer .right .bottom{
     height: 125px;
     display: flex;
