@@ -1,6 +1,9 @@
 .inner{width: 100%;}
-header .bottom{ justify-content: flex-end; }
-header .bottom .ico_hambure.on{ display: block; }
+header, header .top { height: 100px;}
+header .bottom{ height: 0; }
+header .top .menu{ display: none;}
+header .top .ico_hambure.on{ display: block; }
+header .bottom .menu{ display: none; }
 
 .iw_overlay.on{ display: block; }
 
@@ -12,20 +15,52 @@ nav{
     top: 0;
     z-index: 200;
     background: #fff;
+    transition: all 0.2s;
     display: none;
 }
-nav > .mtop{
+nav > div{
+    height: 100%;
+    overflow: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+nav > div::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+nav .mtop{
     width: 100%;
-    height: 180px;
-    padding: 20px 20px 20px 50px;
+    height: 220px;
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid #eee;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0 0 0;
 }
 nav .mlogo{
     width: 230px;
     height: 80px;
-    background: url(/www/project/images/영진닷컴.svg) no-repeat center;
+    background: url(/www/project/images/영진닷컴.svg) no-repeat center / contain;
+}
+nav .menu_ico{
+    display: flex;
+    align-items: center;
+    gap: 0px 30px;
+    padding: 0 20px 10px;
+}
+nav .menu_ico .ico_search{ order: 2;}
+nav .menu_ico .ico_mypage{ order: 1;}
+nav .text_menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font : var(--top-title-font);
+}
+nav .text_menu > a:hover{ color: #000; }
+nav .text_menu > div{
+    width: 1px;
+    height: 12px;
+    background-color: var(--main-color);
+    margin: 0 10px;
 }
 nav.on{ display: block; }
 nav > .mbt_close.on{ display: block; }
@@ -36,9 +71,12 @@ header .bottom .gnb{
     margin: 20px 0 0 0;
     display: block;
 }
+header .bottom .gnb > li:first-child > a{ border-top: 1px dotted #D7DFE3; }
 header .bottom .gnb > li > a{
     padding: 0 0 0 50px;
     position: static;
+    background: #fff;
+    border-bottom: 1px dotted #D7DFE3;
 }
 header .bottom .lnb{
     width: 100%;
@@ -46,11 +84,58 @@ header .bottom .lnb{
     transform: none;
     transition: none;
     box-shadow: none;
-    background: #eee;
+    background: var(--hf-bg-color);
+}
+header .bottom .lnb > li:hover{
+    background: #D7DFE3;
 }
 header .bottom .lnb > li > a,
 header .bottom .gnb > li:nth-child(3) > .lnb > li > a{ padding: 0 0 0 60px; }
 header .bottom .gnb > li:hover > .lnb{
     transform: none;
     transition: none;
+}
+
+.mbottom{
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 20px;
+    font : var(--top-title-font);
+}
+.mbottom .mbMenu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.mbottom .mbMenu > a:hover{ color: #000; }
+.mbottom .mbSite{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    padding: 0 5px;
+    margin: 0 0 50px 0;
+}
+.mbottom .mbSite > .ico{
+    width: 50px;
+    height: 50px;
+}
+.mbottom .mbSite > .ico > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(/www/project/images/snslogo.svg) no-repeat center/ cover;
+}
+.mbottom .mbSite > .cafe > a{ background-position: -302px 2px; }
+.mbottom .mbSite > .blog > a{ background-position: -182px 2px; }
+.mbottom .mbSite > .star > a{ background-position: -2px 2px; }
+.mbottom .mbSite > .face > a{ background-position: -62px 2px; }
+.mbottom .mbSite > .yutube > a{ background-position: -242px 2px; }
+.mbottom .mbSite > .ico > a:hover{
+    transform: scale(1.02, 1.02);
+    opacity: 0.8;
 }

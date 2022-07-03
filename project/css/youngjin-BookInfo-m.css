@@ -1,0 +1,72 @@
+:root{
+    --nav-font : 400 18px 'Inter';
+    --sec-title-font : 700 22px 'Inter';
+    --list-font : 400 18px 'Inter';
+    --info-font : 400 18px 'Inter';
+}
+footer{ height: auto; }
+.inner{ width: 100%; }
+.mbt_close{ left: -80px; }
+
+nav{
+    width: 50%;
+    min-width: 250px;
+    transition: all 0.2s;
+}
+header .bottom .gnb > li > a{ padding: 0 0 0 30px; }
+header .bottom .lnb > li > a{
+    font: 400 16px 'Inter';
+    line-height: 50px;
+    padding: 0 0 0 40px; 
+}
+.mbottom .mbSite > .ico{
+    width: 40px;
+    height: 40px;
+}
+.mbottom .mbSite > .cafe > a{ background-position: -241px 2px; }
+.mbottom .mbSite > .blog > a{ background-position: -145px 2px; }
+.mbottom .mbSite > .star > a{ background-position: -1px 2px; }
+.mbottom .mbSite > .face > a{ background-position: -49px 2px; }
+.mbottom .mbSite > .yutube > a{ background-position: -193px 2px; }
+
+.sec2{
+    height: auto;
+    flex-direction: column;
+    padding: 40px 0;
+}
+.sec2 .img_book{
+    width: 240px;
+    height: 288px;
+}
+.sec2 .box_word{
+    max-width: 320px;
+    width: 95%;
+    gap: 25px;
+}
+.sec2 .book_title{ text-align: center; }
+
+.sec2 .box_info{ gap: 10px; }
+
+
+footer .inner{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 5px;
+}
+footer .left{ width: auto; }
+footer .right{
+    width: auto;
+    padding: 0;
+    text-align: center;
+    gap: 20px;
+}
+footer .right .top{
+    height: auto;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    gap: 20px;
+}
+footer .right .bottom{height: auto;}

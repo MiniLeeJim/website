@@ -1,59 +1,94 @@
 :root{
-    --main-color : #353535;
-    --top-title-font : 400 16px 'Inter';
-    --nav-font : 400 20px 'Inter';
+    --nav-font : 400 18px 'Inter';
     --quickMenu-title-font : 400 16px 'Inter';
-    --book-info-font : 400 20px 'Inter';
-    --book-summary-font : 400 18px 'Inter';
-    --list-font : 400 20px 'Inter';
-    --footer-font : 400 16px 'Inter';
+    --book-info-font : 400 16px 'Inter';
 }
 
-/* nav 안에 홈, 로그인, 회원가입, 서치, 마이페이지, 푸터 카피라이터 부분 옮겨오기 */
-
+.sec2, .sec3, .sec4, .sec5, footer{ height: auto; }
 .inner{ width: 100%; }
+.mbt_close{ left: -80px; }
 
-.sec2{ height: auto; }
-.sec2 .inner{ flex-wrap: wrap; justify-content: center; gap: 18%;}
+
+
+nav{
+    width: 50%;
+    min-width: 250px;
+    transition: all 0.2s;
+}
+header .bottom .gnb > li > a{ padding: 0 0 0 30px; }
+header .bottom .lnb > li > a{
+    font: 400 16px 'Inter';
+    line-height: 50px;
+    padding: 0 0 0 40px; 
+}
+.mbottom .mbSite > .ico{
+    width: 40px;
+    height: 40px;
+}
+.mbottom .mbSite > .cafe > a{ background-position: -241px 2px; }
+.mbottom .mbSite > .blog > a{ background-position: -145px 2px; }
+.mbottom .mbSite > .star > a{ background-position: -1px 2px; }
+.mbottom .mbSite > .face > a{ background-position: -49px 2px; }
+.mbottom .mbSite > .yutube > a{ background-position: -193px 2px; }
+
+.sec2 .inner{
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0 50px 0;
+    gap: 15%;
+}
 .sec2 .menu_quick{
-    flex: 0 0 1;
+    flex: 0 0 auto;
     margin: 10px 0 10px;
 }
-.sec2 .menu_quick > p > span{
-    font-size: 14px;
+.sec2 .menu_quick > p > span{ font-size: 14px; }
+
+.sec3 .top,
+.sec4 .top{
+    justify-content: center;
+    padding: 0;
 }
 .sec3 .bottom{
-    background: #eee;
+    height: auto;
+    padding: 30px 0;
 }
 .sec3 .bottom .left{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    padding: 30px 20px;
+    width: 100%;
+    padding: 10px 20px 0;
 }
 .sec3 .bottom .swiper{
-    width: 50%;
-    padding: 50px 0;
+    width: 100%;
+    padding: 0;
 }
-.sec4 {
-    height: 100%;
-    padding: 50px 0 50px;
-}
+.sec4 { padding: 50px 0; }
 .sec4 .bottom{
+    height: auto;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+}
+.sec4 .bottom .swiper{ width: 100%; }
+.sec4 .bottom .right{
+    width: 100%;
+    aspect-ratio: 5/3;
+}
+.sec4 .bottom .right .youtube{
+    width: 100%;
     height: 100%;
 }
-.sec4 .bottom .right{ padding: 30px 0 0; }
+.sec4 .bottom .right .youtube > iframe{
+    max-width: 550px;
+    max-height: 300px;
+    width: 90%;
+    height: 90%;
+}
 
-.sec5 { height: 100%; }
 .sec5 .inner{ 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 0 100px;
+    padding: 0 0 50px;
 }
 .sec5 .left,
 .sec5 .right{
@@ -61,4 +96,39 @@
     align-items: center;
     padding: 20px 0 20px;
 }
-.sec5 .left .list{ width: 600px; }
+.sec5 .left .list{
+    max-width: 600px;
+    width: 90%;
+}
+.sec5 .left .tap{
+    justify-content: center;
+    margin: 0;
+}
+.sec5 .right .top{
+    padding: 0;
+    line-height: 80px;
+    justify-content: center;
+}
+
+footer .inner{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 5px;
+}
+footer .left{ width: auto; }
+footer .right{
+    width: auto;
+    padding: 0;
+    text-align: center;
+    gap: 20px;
+}
+footer .right .top{
+    height: auto;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    gap: 20px;
+}
+footer .right .bottom{height: auto;}
