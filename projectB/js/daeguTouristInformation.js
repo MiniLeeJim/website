@@ -31,6 +31,12 @@ $(function(){
     });
 
     //sec1,sec3 box
+    $('.sec1 .top .type-bt > button, .sec3 .top .type-bt > button').on('click', function(){
+        if($('.sec1 .box, .sec3 .box').hasClass('on') === true){
+            $('.sec1 .box, .sec3 .box, .box h2, .box .thumbnail, .box .overview, .box .details-bt').removeClass('on');
+        }
+        $('.contents > .con1, .contents > .con1 > h2, .contents > .con1 > .thumbnail, .contents > .con1 > .overview, .contents > .con1 > .details-bt').addClass('on');
+    });
     $('.sec1 .box, .sec3 .box').on('click', function(){
         $(this).addClass('on').siblings().removeClass('on');
         if($(this).hasClass('on') === true){
