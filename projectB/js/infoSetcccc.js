@@ -8,9 +8,9 @@ let sec1Overview = document.querySelectorAll('.sec1 .contents .box > .overview >
 let sec1addr = document.querySelectorAll('.sec1 .contents .box > .overview .addr');
 let sec1page = document.querySelectorAll('.sec1 .contents .box > .overview .page');
 
-let contit = [];
-let contentId = [];
-let conTypeId;
+let sec1contit = [];
+let sec1contentId = [];
+let sec1conTypeId;
 let list;
 let serviceKey = '?serviceKey=3urh8C0NVH6wzrXIQEu4isiHyIW2yqSa0cXLO3JrUsxkQPVhI%2BO%2BlSi64N%2BpYYXTFfCmpkx0y6Okb96gS8wnRQ%3D%3D';
 
@@ -33,7 +33,7 @@ function conListSet(type){
 };
 
 //conId 받아서 저장하기, contit 넣기
-function conIdTitSet(conlist){
+function titSet(conlist, sec){
     return new Promise(function(resolve, reject){
         conlist.onreadystatechange = function(){
             if(conlist.readyState == 4 && conlist.status == 200){
@@ -42,14 +42,27 @@ function conIdTitSet(conlist){
                 
                 list = conJson['response'].body.items.item;
                 
-                contit = []; //초기화
-                var conId = []; //초기화
-                for(var i = 0; i < list.length; i++){
-                    contit.push(list[i].title);
-                    sec1Tit[i].textContent = contit[i];
-                    conId.push(list[i].contentid);
+                sec1contit = []; //초기화
+                sec3contit = []; //초기화
+                var sec1conId = []; //초기화
+                var sec3conId = []; //초기화
+
+                if(sec == 1){
+                    for(var i = 0; i < list.length; i++){
+                        sec1contit.push(list[i].title);
+                        sec1Tit[i].textContent = sec1contit[i];
+                        sec1conId.push(list[i].contentid);
+                    }
+                    resolve(sec1conId);
+                } else{
+                    for(var i = 0; i < list.length; i++){
+                        sec3contit.push(list[i].title);
+                        sec3Tit[i].textContent = sec3contit[i];
+                        sec3conId.push(list[i].contentid);
+                    }
+                    resolve(sec3conId);
                 }
-                resolve(conId);
+
             };
         };
         conlist.send("");
@@ -77,36 +90,77 @@ function detailCommon(contentId){
     detailCommonList.open('GET', detailCommonUrl + queryParams);
 }
 
-function datapush(detList, index){
-    sec1Overview[index].innerHTML = detList.overview;
-    imgAdd(detList, index);
-    addrAdd(detList, index);
-    homeAdd(detList, index);
+function datapush(detList, index, sec){
+    if(sec == 1){
+        sec1Overview[index].innerHTML = detList.overview;
+        console.log(sec);
+        // imgAdd(detList, index);
+        // addrAdd(detList, index);
+        // homeAdd(detList, index);
+    } else{
+        sec3Overview[index].innerHTML = detList.overview;
+        console.log(sec);
+        // imgAdd(detList, index);
+        // addrAdd(detList, index);
+        // homeAdd(detList, index);
+    }
+    
 };
 
-//공통정보
-function detailCommonCall(){
-    detailCommonList.onreadystatechange = function(){
-        if(detailCommonList.readyState == 4 && detailCommonList.status == 200){
-            var deatilCommonJsonObj = JSON.parse(detailCommonList.response);
-            var detList = deatilCommonJsonObj['response'].body.items.item;
+function dataChoice(dataNum, detList, sec){
+    console.log(detList);
+    if(startIndex == 0 || dataNum == 0){
+        datapush(detList, 0, sec);
+    } else if(dataNum == 1){
+        datapush(detList, 1, sec);
+    } else if(dataNum == 2){
+        datapush(detList, 2, sec);
+    } else if(dataNum == 3){
+        datapush(detList, 3, sec);
+    } else{
+        datapush(detList, 4, sec);
+    } 
+}
 
-            //중첩이프문 들어가야 할듯 sec1이냐 sec3이냐 물어보기 true면 sec1 실행 false면 sec3실행
-            //아니면 if에 조건 추가하기. sec1이 트루냐는 조건을 and로 넣기
-            if(startIndex == 0 || dataNum == 0){
-                datapush(detList, 0);
-            } else if(dataNum == 1){
-                datapush(detList, 1);
-            } else if(dataNum == 2){
-                datapush(detList, 2);
-            } else if(dataNum == 3){
-                datapush(detList, 3);
-            } else{
-                datapush(detList, 4);
-            } 
+//공통정보
+function detailCommonCall(sec){
+    return new Promise(function(resolve, reject){
+        detailCommonList.onreadystatechange = function(){
+            if(detailCommonList.readyState == 4 && detailCommonList.status == 200){
+                var deatilCommonJsonObj = JSON.parse(detailCommonList.response);
+                var detList = deatilCommonJsonObj['response'].body.items.item;
+
+                console.log(sec);
+                if(sec == 1){
+                    console.log(sec);
+                    if(startIndex == 0 || dataNum == 0){
+                        datapush(detList, 0, sec);
+                    } else if(dataNum == 1){
+                        datapush(detList, 1, sec);
+                    } else if(dataNum == 2){
+                        datapush(detList, 2, sec);
+                    } else if(dataNum == 3){
+                        datapush(detList, 3, sec);
+                    } else{
+                        datapush(detList, 4, sec);
+                    } 
+                } else{
+                    if(startIndex == 0 || dataNum == 0){
+                        datapush(detList, 0, sec);
+                    } else if(dataNum == 1){
+                        datapush(detList, 1, sec);
+                    } else if(dataNum == 2){
+                        datapush(detList, 2, sec);
+                    } else if(dataNum == 3){
+                        datapush(detList, 3, sec);
+                    } else{
+                        datapush(detList, 4, sec);
+                    } 
+                }          
+            }
         }
-    }
-    detailCommonList.send();
+        detailCommonList.send();
+    });
 }
 
 //해당 데이터가 없을때(undefined) '-'를 출력해주는 함수
@@ -139,14 +193,32 @@ function homeAdd(detList, index){
 }
 
 //데이터 set
-async function dataSet(){
-    var type = conListSet(conTypeId);
-    contentId = await conIdTitSet(type);
+async function dataSet(sec){
+    if(sec == -1){
+        var type = conListSet(sec1conTypeId);
+        sec1contentId = await titSet(type, 1);
+        var type2 = lodgmentListSet(sec3areaCode);
+        sec3contentId = await titSet(type2, 3);
+    } else if(sec == 1){
+        var type = conListSet(sec1conTypeId);
+        sec1contentId = await titSet(type, 1);
+    } else{
+        var type2 = lodgmentListSet(sec3areaCode);
+        sec3contentId = await titSet(type2, 3);
+    }
+    
 }
 
-function dataSet2(num){
-    detailCommon(contentId[num]);
-    detailCommonCall();
+async function dataSet2(num, sec){
+    if(sec == 1){
+        detailCommon(sec1contentId[num]);
+        await detailCommonCall(1);
+        console.log('1');
+    } else{
+        detailCommon(sec3contentId[num]);
+        await detailCommonCall(3);
+        console.log('3');
+    }
 }
 
 function dataSet3(num){
@@ -154,11 +226,19 @@ function dataSet3(num){
     detailIntroCall();
 }
 
-async function typeDataSet(typedata){
-    conTypeId = typedata.dataset.code;
-    dataNum = typedata.dataset.num;
-    await dataSet();
-    dataSet2(dataNum);
+async function typeDataSet(typedata, sec){
+    if(sec == 1){
+        sec1conTypeId = typedata.dataset.code;
+        dataNum = typedata.dataset.num;
+        await dataSet(sec);
+        dataSet2(dataNum, sec);
+    } else{
+        sec3areaCode = typedata.dataset.code;
+        dataNum = typedata.dataset.num;
+        await dataSet(sec);
+        dataSet2(dataNum, sec);
+    }
+    
 };
 
 //box클릭 시
@@ -172,19 +252,21 @@ function boxClick(thisbox){
 var startIndex;
 window.addEventListener("load", async function(){
     startIndex = 0;
-    conTypeId = '12';
-    await dataSet();
-    dataSet2(0);
+    sec1conTypeId = '12';
+    sec3areaCode = '1';
+    await dataSet(-1);
+    await dataSet2(0, 1);
+    dataSet2(0, 3);
 })
 
 sec1Btn[0].addEventListener('click', function(){
-    typeDataSet(this);
+    typeDataSet(this, 1);
 });
 sec1Btn[1].addEventListener('click', function(){
-    typeDataSet(this);
+    typeDataSet(this, 1);
 });
 sec1Btn[2].addEventListener('click', function(){
-    typeDataSet(this);
+    typeDataSet(this, 1);
 });
 
 //sec1 박스클릭
@@ -209,6 +291,9 @@ sec1Box[4].addEventListener('click', function(){
 
 
 //sec3 숙박정보 관련
+let sec3contit = [];
+let sec3contentId = [];
+let sec3areaCode;
 
 let sec3Btn = document.querySelectorAll('.sec3 .top .type-bt > button');
 let sec3Box = document.querySelectorAll('.sec3 .contents .box');
@@ -223,7 +308,7 @@ let sec3page = document.querySelectorAll('.sec3 .contents .box > .overview .page
 var lodgmentlist = new XMLHttpRequest();
 
 function lodgmentListSet(areaCode){
-    var lodgmentListUrl = 'http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaCode'; /*URL*/
+    var lodgmentListUrl = 'http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList'; /*URL*/
 
     var queryParams = serviceKey; /*Service Key*/
     queryParams += '&' + 'numOfRows' + '=' + '5'; /**/
@@ -237,19 +322,21 @@ function lodgmentListSet(areaCode){
     queryParams += '&_type=json';
     lodgmentlist.open('GET', lodgmentListUrl + queryParams);
 
-    lodgmentlist.onreadystatechange = function(){
-        if(lodgmentlist.readyState == 4 && lodgmentlist.status == 200){
+    return lodgmentlist;
 
-            var lodgmentJson = JSON.parse(lodgmentlist.response);
-            var lodList = lodgmentJson['response'].body.items.item;
-        };
-    };
-    lodgmentlist.send("");
+    // lodgmentlist.onreadystatechange = function(){
+    //     if(lodgmentlist.readyState == 4 && lodgmentlist.status == 200){
+
+    //         var lodgmentJson = JSON.parse(lodgmentlist.response);
+    //         var lodList = lodgmentJson['response'].body.items.item;
+    //     };
+    // };
+    // lodgmentlist.send("");
 };
 // lodgmentListSet();
 
 sec3Btn[0].addEventListener('click', function(){
-    typeDataSet(this);
+    typeDataSet(this, 3);
 });
 // sec3Btn[1].addEventListener('click', function(){
 //     typeDataSet(this);
