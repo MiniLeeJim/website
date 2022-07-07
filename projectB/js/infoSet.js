@@ -14,6 +14,7 @@ let conTypeId;
 let list;
 let serviceKey = '?serviceKey=3urh8C0NVH6wzrXIQEu4isiHyIW2yqSa0cXLO3JrUsxkQPVhI%2BO%2BlSi64N%2BpYYXTFfCmpkx0y6Okb96gS8wnRQ%3D%3D';
 
+
 //관광지 리스트 뽑기
 var conlist = new XMLHttpRequest();
 function conListSet(type){
@@ -55,6 +56,11 @@ function conIdTitSet(conlist){
         conlist.send("");
     });
 }
+
+
+
+
+
 
 //공통정보 url
 var detailCommonList = new XMLHttpRequest(); 
@@ -169,107 +175,41 @@ function boxClick(thisbox){
 };
 
 //처음 화면이 로드 되었을 때
-var startIndex;
-window.addEventListener("load", async function(){
-    startIndex = 0;
-    conTypeId = '12';
-    await dataSet();
-    dataSet2(0);
-})
+// var startIndex;
+// window.addEventListener("load", async function(){
+//     startIndex = 0;
+//     conTypeId = '12';
+//     await dataSet();
+//     dataSet2(0);
+// })
 
-sec1Btn[0].addEventListener('click', function(){
-    typeDataSet(this);
-});
-sec1Btn[1].addEventListener('click', function(){
-    typeDataSet(this);
-});
-sec1Btn[2].addEventListener('click', function(){
-    typeDataSet(this);
-});
-
-//sec1 박스클릭
-var dataNum;
-
-sec1Box[0].addEventListener('click', function(){
-    boxClick(this);
-});
-sec1Box[1].addEventListener('click', function(){
-    boxClick(this);
-});
-sec1Box[2].addEventListener('click', function(){
-    boxClick(this);
-});
-sec1Box[3].addEventListener('click', function(){
-    boxClick(this);
-});
-sec1Box[4].addEventListener('click', function(){
-    boxClick(this);
-});
-
-
-
-//sec3 숙박정보 관련
-
-let sec3Btn = document.querySelectorAll('.sec3 .top .type-bt > button');
-let sec3Box = document.querySelectorAll('.sec3 .contents .box');
-let sec3Tit = document.querySelectorAll('.sec3 .contents .box > h2');
-let sec3Thumbnail = document.querySelectorAll('.sec3 .contents .box > .thumbnail');
-let sec3Overview = document.querySelectorAll('.sec3 .contents .box > .overview > .overtxt');
-let sec3addr = document.querySelectorAll('.sec3 .contents .box > .overview .addr');
-let sec3page = document.querySelectorAll('.sec3 .contents .box > .overview .page');
-
-
-//시군구 코드를 받아와서 숙박을 조회수 순으로 조회--------------------------여기서부터 이름 바꿔주는 작업좀 하고------------------------------
-var lodgmentlist = new XMLHttpRequest();
-
-function lodgmentListSet(areaCode){
-    var lodgmentListUrl = 'http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaCode'; /*URL*/
-
-    var queryParams = serviceKey; /*Service Key*/
-    queryParams += '&' + 'numOfRows' + '=' + '5'; /**/
-    queryParams += '&' + 'pageNo' + '=' + '1'; /**/
-    queryParams += '&' + 'MobileOS' + '=' + 'ETC'; /**/
-    queryParams += '&' + 'MobileApp' + '=' + 'AppTest'; /**/
-    queryParams += '&' + 'arrange' + '=' + 'P'; /**/
-    queryParams += '&' + 'contentTypeId' + '=' + '32'; /*숙박*/
-    queryParams += '&' + 'areaCode' + '=' + '4'; /**/
-    queryParams += '&' + 'sigunguCode' + '=' + areaCode; /**/
-    queryParams += '&_type=json';
-    lodgmentlist.open('GET', lodgmentListUrl + queryParams);
-
-    lodgmentlist.onreadystatechange = function(){
-        if(lodgmentlist.readyState == 4 && lodgmentlist.status == 200){
-
-            var lodgmentJson = JSON.parse(lodgmentlist.response);
-            var lodList = lodgmentJson['response'].body.items.item;
-        };
-    };
-    lodgmentlist.send("");
-};
-// lodgmentListSet();
-
-sec3Btn[0].addEventListener('click', function(){
-    typeDataSet(this);
-});
-// sec3Btn[1].addEventListener('click', function(){
+// sec1Btn[0].addEventListener('click', function(){
 //     typeDataSet(this);
 // });
-// sec3Btn[2].addEventListener('click', function(){
+// sec1Btn[1].addEventListener('click', function(){
 //     typeDataSet(this);
 // });
-// sec3Btn[3].addEventListener('click', function(){
+// sec1Btn[2].addEventListener('click', function(){
 //     typeDataSet(this);
 // });
-// sec3Btn[4].addEventListener('click', function(){
-//     typeDataSet(this);
+
+// //sec1 박스클릭
+// var dataNum;
+
+// sec1Box[0].addEventListener('click', function(){
+//     boxClick(this);
 // });
-// sec3Btn[5].addEventListener('click', function(){
-//     typeDataSet(this);
+// sec1Box[1].addEventListener('click', function(){
+//     boxClick(this);
 // });
-// sec3Btn[6].addEventListener('click', function(){
-//     typeDataSet(this);
+// sec1Box[2].addEventListener('click', function(){
+//     boxClick(this);
 // });
-// sec3Btn[7].addEventListener('click', function(){
-//     typeDataSet(this);
+// sec1Box[3].addEventListener('click', function(){
+//     boxClick(this);
 // });
+// sec1Box[4].addEventListener('click', function(){
+//     boxClick(this);
+// });
+
 

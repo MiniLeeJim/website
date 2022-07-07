@@ -4,24 +4,89 @@
     <meta charset="UTF-8">
     <title>조회</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .pop{
+            position: absolute;
+            width: 500px;
+            height: 700px;
+            background-color: #fff;
+            border: 1px solid #000;
+            top: calc(50% - 350px);
+            left: calc(50% - 250px);
+            display: none;
+        }
+        .pop.on{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #map{
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+        }
+        .box{ margin: 20px; }
     </style>
 </head>
 <body>
-    <div class="wrap01">
+    <button class="bt01 bt">01</button>
+    <button class="bt02 bt">02</button>
+    <button class="bt03 bt">03</button>
+    <button class="bt04 bt">04</button>
+    <button class="bt05 bt">05</button>
+    <div class="pop">
+        <div id="map"></div>
+        <button class="close">닫기</button>
+    </div>
+    <div class="wrap01 box">
         <h2>관광지</h2>
     </div>
-    <div class="wrap02">
+    <div class="wrap02 box">
         <h2>문화</h2>
     </div>
-    <div class="wrap03">
+    <div class="wrap03 box">
         <h2>음식</h2>
     </div>
-    <div class="wrap04">
+    <div class="wrap04 box">
         <h2>숙박</h2>
+        <div class="sigungu01">
+            <h3>남구</h3>
+        </div>
+        <div class="sigungu02">
+            <h3>달서구</h3>
+        </div>
+        <div class="sigungu03">
+            <h3>달성군</h3>
+        </div>
+        <div class="sigungu04">
+            <h3>동구</h3>
+        </div>
+        <div class="sigungu05">
+            <h3>북구</h3>
+        </div>
+        <div class="sigungu06">
+            <h3>서구</h3>
+        </div>
+        <div class="sigungu07">
+            <h3>수성구</h3>
+        </div>
+        <div class="sigungu08">
+            <h3>중구</h3>
+        </div>
     </div>
-
-
+    <div class="wrap05 box">
+        <h2>태그</h2>
+    </div>
+    <div class="wrap06 box">
+        <h2>축제</h2>
+    </div>
     <script src="/www/projectB/js/jquery-3.6.0.min.js"></script>
+    <script src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=735d9b9f22bc538d840f6cb69a82d1d9"></script>
     <script src="/www/projectB/js/data.js"></script>
 </body>
 </html>

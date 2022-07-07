@@ -30,6 +30,16 @@ $(function(){
         $('.vertical-slider').slick('goTo', 0);
     });
 
+    //날씨
+    let weatherAPIurl = 'https://api.openweathermap.org/data/2.5/weather?lat=35.8714354&lon=128.601445&appid=11fab8ba6004ca5f26c0564154f2b59d&units=metric&lang=kr';
+    $.getJSON(weatherAPIurl, function(result){
+        let icon = `<img src="/www/projectB/images/weather/${result.weather[0].icon}.png" alt="${result.weather[0].description}">`
+        let temp = result.main.temp.toFixed(1);
+        $('.weather-icon').append(icon);
+        $('.description').append(`${result.weather[0].description}`);
+        $('.temp').append(`${temp}˚C`);
+    })
+
     //sec1,sec3 box
     $('.sec1 .top .type-bt > button, .sec3 .top .type-bt > button').on('click', function(){
         if($('.sec1 .box, .sec3 .box').hasClass('on') === true){
