@@ -11,8 +11,21 @@
 table{ border-collapse: collapse; }
 ::-webkit-scrollbar { display: none; }
 a{ text-decoration: none; }
-/* ul, li{ list-style: none; } */
+ul, li{ list-style: none; }
 h1{ font-size: 30px; }
+.type-bt{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.type-bt > button{
+    padding: 5px 20px;
+    margin: 0 0 10px 20px;
+}
+.type-bt > button:first-child{margin-left: 0;}
+.sec1 .type-bt > button{margin-bottom: 0;}
+
+
 
 /**********menu**********/
 .menu{
@@ -34,19 +47,58 @@ nav{
     left: 0;
     z-index: 1000;
     background: #fff;
-    transform: all 0.5s;
     padding: 40px;
     display: none;
 }
-.gnb{ display: flex; }
-.lnb{ padding-left: 30px;}
-.lnb ul{
-    padding-left: 30px;
-}
 nav.on{
     display: block;
-    transform: all 0.5s;
 }
+.gnb{
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.gnb > li{
+    margin: 10px 5px;
+    width: 240px;
+}
+.gnb > li > a{
+    font-weight: 700;
+    padding: 0 0 0 10px;
+    height: 35px;
+    line-height: 35px;
+    display: block;
+    border: 1px solid #ddd;
+}
+.lnb{
+    padding-left: 10px;
+}
+.lnb > li > a{
+    display: block;
+    padding: 5px 0;
+}
+.lnb > li > ul a{
+    display: block;
+    padding: 2px 0;
+    font-size: 15px;
+}
+.lnb ul{
+    padding-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**********header**********/
 header{
@@ -84,7 +136,7 @@ header .logo{
     display: block;
     width: 70px;
 }
-.weather .description{ margin: 0 10px; }
+.weather .description{ margin: 0 10px; font-size: 15px;}
 .search{ width: 100%; }
 .search > input{
     background: url(/www/projectB/images/검색.svg) no-repeat 5px center / 30px;
@@ -181,9 +233,7 @@ header .logo{
 }
 
 /**********sec1**********/
-/*****sec1, sec3 동일*****/
-.sec1 .top,
-.sec3 .top{
+.sec1 .top{
     width: 100%;
     height: 15%;
     /* max-height: 200px; */
@@ -191,16 +241,8 @@ header .logo{
     align-items: flex-end;
     padding: 0 40px;
 }
-.sec1 .top > h1,
-.sec3 .top > h1{
-    margin-right: 40px;
-}
-.type-bt > button{
-    padding: 5px 20px;
-    margin-right: 20px;
-}
-.sec1 .contents,
-.sec3 .contents{
+.sec1 .top > h1{ margin-right: 40px; }
+.sec1 .contents{
     width: 100%;
     height: 85%;
     display: flex;
@@ -208,7 +250,7 @@ header .logo{
     align-items: flex-start;
     padding-top: 70px;
 }
-.contents .box{
+.sec1 .contents .box{
     height: 100%;
     max-height: 750px;
     width: 180px;
@@ -221,7 +263,7 @@ header .logo{
     border: 1px solid black;
     transition: all 0.3s;
 }
-.contents .box.on{
+.sec1 .contents .box.on{
     width: 550px;
     min-width: 500px;
     background: #ddd;
@@ -229,7 +271,7 @@ header .logo{
     transition: all 0.3s;
 }
 
-.contents .box > h2{
+.sec1 .contents .box > h2{
     max-width: 500px;
     min-height: 40px;
     line-height: 40px;
@@ -240,27 +282,27 @@ header .logo{
     text-overflow: ellipsis;
     
 }
-.contents .box > h2.on{
+.sec1 .contents .box > h2.on{
     width: 100%;
     max-width: auto;
     transform: rotate(0deg);
 }
-.contents .box .thumbnail{
+.sec1 .contents .box .thumbnail{
     margin: 20px 0;
     display: none;
 }
-.contents .box .overview{
+.sec1 .contents .box .overview{
     margin: 0 0 20px;
     display: none;
 }
-.contents .box .details-bt{ display: none; }
-.contents .box .thumbnail.on{
+.sec1 .contents .box .details-bt{ display: none; }
+.sec1 .contents .box .thumbnail.on{
     width: 350px;
     height: 230px;
     display: block;
     transition: all 0.5s;
 }
-.contents .box .overview.on{
+.sec1 .contents .box .overview.on{
     width: 100%;
     height: 290px;
     display: flex;
@@ -268,7 +310,7 @@ header .logo{
     align-items: center;
     transition: all 0.5s;
 }
-.contents .box .overview .overtxt{
+.sec1 .contents .box .overview .overtxt{
     text-align: justify;
     overflow: hidden;
     display: -webkit-box;
@@ -278,12 +320,12 @@ header .logo{
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
 }
-.contents .box .overview .other{margin: 0 0 10px; }
-.contents .box .overview th,
-.contents .box .overview td{ padding: 5px 10px; }
-.contents .box .overview th{ text-align: left; }
-.contents .box .overview td{ width: 350px; }
-.contents .box .details-bt.on{
+.sec1 .contents .box .overview .other{margin: 0 0 10px; }
+.sec1 .contents .box .overview th,
+.sec1 .contents .box .overview td{ padding: 5px 10px; }
+.sec1 .contents .box .overview th{ text-align: left; }
+.sec1 .contents .box .overview td{ width: 350px; }
+.sec1 .contents .box .details-bt.on{
     padding: 5px 40px;
     display: block;
     transition: all 0.5s;
@@ -320,13 +362,14 @@ header .logo{
 }
 .tag-slider .conbox{
     height: 280px;
-    background-color: #888;
     margin: 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .tag-slider .conbox > h3{
+    position: absolute;
     width: 80%;
     height: 40px;
     line-height: 40px;
@@ -348,10 +391,23 @@ header .logo{
     background-color: #ddd;
     position: relative;
 }
+.tag-txt{
+    padding: 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.tag-txt span{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 15px;
+    cursor: pointer;
+}
 .custom-arrow-tag{
     position: absolute;
     left: 60px;
-    bottom: -10px;
+    bottom: -15px;
     display: flex;
     flex-direction: column;
     transform: rotate(270deg);
@@ -360,7 +416,6 @@ header .logo{
     width: 40px;
     height: 40px;
     cursor: pointer;
-    border-radius: 50%;
 }
 .prev-arrow-tag{ background: rgba(0,0,0,0.1) url(/www/projectB/images/expand_less_FILL0_wght400_GRAD0_opsz48.svg) no-repeat center / cover; }
 .next-arrow-tag{ background: rgba(0,0,0,0.1) url(/www/projectB/images/expand_more_FILL0_wght400_GRAD0_opsz48.svg) no-repeat center / cover; margin-top: 25px;}
@@ -418,19 +473,151 @@ header .logo{
     right: -55px;
 }
 .sec2 .contents .poster-info{
-    margin-left: 40px;
-    width: 750px;
+    margin-left: 50px;
+    width: 100%;
     height: 100%;
-    max-height: 450px;
+    max-width: 750px;
+    max-height: 350px;
 }
 .sec2 .contents .poster-info .info{
     position: absolute;
-    width: 750px;
+    /* width: 100%; */
     height: 100%;
-    max-height: 450px;
+    max-width: 750px;
+    max-height: 350px;
 }
-/**********sec3**********/
+.sec2 .info h2{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sec2 .info .other{ margin: 10px 0 5px ; }
+.sec2 .info th,
+.sec2 .info td{ padding: 5px 10px; }
+.sec2 .info th{ text-align: left; width: 100px;}
+.sec2 .info td{ width: 540px; }
+.sec2 .overtxt{
+    padding: 5px 10px;
+    /* width: 100%; */
+    /* height: 140px; */
+    text-align: justify;
+    overflow: hidden;
+    display: -webkit-box;
+    word-wrap: break-word;
+    -webkit-line-clamp: 8;
+    line-height: 25px;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
 
+/**********sec3**********/
+.sec3 .slick-track{
+    display: flex;
+    flex-direction: column;
+}
+.sec3 .slick-list{
+    overflow: visible;
+}
+.prev-arrow-lodgment, .next-arrow-lodgment{
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    
+    left: 35px;
+    /* transform: rotate(270deg); */
+}
+.prev-arrow-lodgment{
+    background: rgba(0,0,0,0.1) url(/www/projectB/images/expand_less_FILL0_wght400_GRAD0_opsz48.svg) no-repeat center / cover;
+    top: 10px;
+}
+.next-arrow-lodgment{
+    background: rgba(0,0,0,0.1) url(/www/projectB/images/expand_more_FILL0_wght400_GRAD0_opsz48.svg) no-repeat center / cover;
+    top: 80px;
+}
+.sec3 .top{
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 40px 50px;
+    background-color: #fff;
+    
+}
+.sec3 .top h1{
+    margin: 20px 0;
+}
+.sec3 .contents{
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.lodgment-slider{
+    width: 100%;
+    max-width: 1050px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    /* overflow: hidden; */
+}
+.sec3 .slick-vertical .slick-slide{
+    display: flex;
+    height: 290px;
+    border: 1px solid #000;
+}
+.sec3_box{
+    width: 100%;
+    max-width: 1000px;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 40px;  
+}
+.sec3 .thumbnail{
+    width: 300px;
+    height: 250px;
+    margin-right: 20px;
+    background-color: #ddd;
+}
+.sec3 .info{
+    max-width: 640px;
+    margin-bottom: 10px;
+}
+.sec3 .info h2{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sec3 .info .other{margin: 10px 0 5px ; }
+.sec3 .info th,
+.sec3 .info td{ padding: 5px 10px; }
+.sec3 .info th{ text-align: left; width: 100px;}
+.sec3 .info td{ width: 540px; }
+.sec3 .overtxt{
+    /* width: 100%; */
+    /* height: 140px; */
+    text-align: justify;
+    overflow: hidden;
+    display: -webkit-box;
+    word-wrap: break-word;
+    -webkit-line-clamp: 5;
+    line-height: 25px;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.sec3 .details-bt{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
 
 
 /**********sec4**********/

@@ -195,7 +195,7 @@ header .bottom .menu{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #ddd;
+    background: var(--hf-bg-color);
 }
 
 /* ===sub_company start=== */
@@ -375,7 +375,7 @@ header .bottom .menu{
 }
 .sub_history .sec3 .select .left > p:nth-child(2),
 .sub_history .sec3 .select .right > p:nth-child(2){ font: 400 18px 'Inter';}
-.sub_history .sec3 .select .left{ background: #ddd; }
+.sub_history .sec3 .select .left{ background: var(--hf-bg-color); }
 .sub_history .sec3 .history{
     display: flex;
     flex-direction: column;

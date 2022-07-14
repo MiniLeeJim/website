@@ -1,0 +1,293 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 1px solid red;
+    font-family: 'Dosis';
+    letter-spacing: 1px;
+    word-break: keep-all;
+}
+
+:root{
+    --sec01-h1-font: 400 100px 'Dosis';
+    --font-color: #353535;
+    --hover-color: rgb(127, 152, 175);
+    --youngjin-color: #E9EEF0;
+}
+
+html{ height: 100vh; }
+ul, li{list-style: none;}
+a{text-decoration: none;}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 48;
+    display: block;
+}
+
+.sec02 .contents,
+.sec03 .contents,
+.sec04 .contents{padding: 100px 0 0;}
+
+
+nav{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 1000;
+    top: -100px;
+    opacity: 0;
+    left: 0;
+    background-color: #fff;
+    transition: all 0.5s;
+}
+nav > ul{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+nav > ul > li > a{
+    display: block;
+    height: 100%;
+    line-height: 100px;
+    padding: 0 50px;
+    font-size: 26px;
+    color: var(--font-color);
+}
+nav > ul > li:hover > a{
+    color: var(--hover-color);
+}
+nav.on{
+    top: 0;
+    opacity: 1;
+}
+
+
+/*full-slide*/
+.vertical-slider{
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.vertical-slider .slide {height: 100vh;}
+.slide{ display: block; }
+/***********/
+
+
+.sec01 .contents{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.sec01 .contents h1{
+    font: var(--sec01-h1-font);
+    color: var(--font-color);
+    text-align: center;
+}
+.sec01 ul{ margin: 50px 0; }
+.sec01 ul > li > a{
+    display: flex;
+    position: relative;
+    color: var(--font-color);
+}
+.sec01 ul > li > a span{
+    display: block;
+    padding: 10px 0;
+    font-size: 22px;
+}
+.sec01 ul > li > a span:first-child{
+    position: absolute;
+    left: -30px;
+}
+.sec01 .arrow{
+    opacity: 0;
+    font-size: 30px;
+}
+.sec01 ul > li:hover span:last-child{ color: var(--hover-color); }
+.sec01 ul > li:hover .arrow{ opacity: 1; }
+
+
+.sec01 .wheel{
+    position: absolute;
+    bottom: 70px;
+    transition: all 0.3s;
+}
+.sec01 .wheel .mouse-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sec01 .wheel .material-symbols-outlined{
+    font-size: 50px;
+    color: #555;
+}
+.sec01 .wheel p{
+    width: 100%;
+    letter-spacing: 5px;
+    padding: 5px 5px 5px 10px;
+    text-align: center;
+}
+.sec01 .wheel:hover{
+    bottom: 50px;
+}
+
+/*sec02*/
+.sec02{ background-color: skyblue; }
+
+/******/
+
+/*sec03*/
+.sec03 .contents{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec03 .tap-tit{
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.sec03 .tap-tit ul{
+    height: 50px;
+    display: flex;
+}
+.sec03 .tap-tit ul > li{ background-color: transparent; }
+.sec03 .tap-tit ul > li.on > a{
+    background-color: rgb(128, 134, 136);
+    color: #fff;
+}
+.sec03 .tap-tit ul > li > a{
+    display: block;
+    height: 100%;
+    line-height: 50px;
+    font-size: 26px;
+    padding: 0 20px;
+    color: var(--font-color);
+}
+.sec03 .project-box{
+    width: 90%;
+    min-height: 550px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--font-color);
+}
+.sec03 .project-box .left{
+    width: 40%;
+    height: 100%;
+    position: relative;
+    background-color: rgba(233, 238, 240, 0.2);
+}
+
+.sec03 .left .web{
+    position: relative;
+    left: 10%;
+    top: 100px;
+    max-width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+.sec03 #project-a .left .web .web-img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 800px;
+    background: url(/www/web/images/영진전체화면.JPG) no-repeat center / cover;
+    transition: all 2s;
+}
+.sec03 .left .web:hover{ z-index: 200; }
+.sec03 #project-a .left .web:hover .web-img{top: -500px; }
+.sec03 .left .mobile{
+    position: relative;
+    left: 70%;
+    top: -60px;
+    max-width: 150px;
+    height: 220px;
+    overflow: hidden;
+}
+.sec03 #project-a .left .mobile .mobile-img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1000px;
+    background: url(/www/web/images/영진전체화면m.JPG) no-repeat center / cover;
+    transition: all 3s;
+}
+.sec03 #project-a .left .mobile:hover .mobile-img{ top: -780px; }
+
+.sec03 .project-box .right{
+    width: 60%;
+    height: 100%;
+    background-color: #fff;
+    position: relative;
+}
+.sec03 .project-box .right::before{
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: rgb(128, 134, 136);
+}
+.sec03 .project-box .info{ margin: 50px 70px; }
+.sec03 .project-box .info .responsive,
+.sec03 .project-box .info .overview,
+.sec03 .project-box .info .main-color,
+.sec03 .project-box .info .moreview{ display: flex; }
+.sec03 .project-box .info h3{ font: 700 26px '맑은 고딕', 'sans-serif'; }
+.sec03 .project-box .info h4{
+    flex: 0 0 150px;
+    font-size: 22px;
+    width: 150px;
+}
+.sec03 .project-box .info p{ font: 400 18px '맑은 고딕', 'sans-serif'; }
+.sec03 .project-box .info .main-color .co01,
+.sec03 .project-box .info .main-color .co02{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgb(128, 134, 136);
+    margin-right: 20px;
+}
+.sec03 #project-a .info .main-color .co01{ background-color: #fff; }
+.sec03 #project-a .info .main-color .co02{ background-color: var(--youngjin-color); }
+.sec03 .project-box .info .wrap-box{ margin: 30px 0; }
+.sec03 .project-box .info .wrap-box > div{ padding: 20px 0; }
+.sec03 .project-box .info .moreview > a{
+    font: 400 18px '맑은 고딕', 'sans-serif';
+    color: var(--font-color);
+    display: block;
+    padding: 8px 15px;
+    border: 1px solid rgb(128, 134, 136);
+    background-color: var(--youngjin-color);
+}
+.sec03 .project-box .info .moreview > a:last-child{ margin-left: 40px; }
+
+.sec03 .project-box{ display: none; }
+.sec03 .project-box.on{ display: flex; }
+
+
+/******/
+
+
+/*sec04*/
+.sec04{ background-color: royalblue; }
+
+/******/

@@ -142,6 +142,6 @@ Array.from(secBt).forEach(function(btName, index){
             secBt[i].style.backgroundColor = '#fff';
         }
         hisCon[index].classList.add('on');
-        secBt[index].style.backgroundColor = '#ddd';
+        secBt[index].style.backgroundColor = '#E9EEF0';
     });
 });
