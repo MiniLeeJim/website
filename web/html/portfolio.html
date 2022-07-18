@@ -64,20 +64,36 @@
                 <div class="info">
                     <div class="name">
                         <h4>NAME</h4>
-                        <span>이지민</span>
+                        <div class="box">
+                            <p>이지민</p>
+                        </div>                        
                     </div>
                     <div class="edu">
                         <h4>EDUCATION</h4>
-                        <span>2022. 대덕대학교 컴퓨터정보학과 졸업</span>
+                        <div class="box">
+                            <p>2022 대덕대학교 컴퓨터정보학과 졸업</p>
+                        </div>                       
                     </div>
                     <div class="license">
                         <h4>LICENSE</h4>
-                        <span>정보처리산업기사</span>
-                        <span>웹디자인기능사</span>
+                        <div class="box">
+                            <p>2022 웹디자인기능사</p>
+                            <p>2021 정보처리산업기사</p>
+                            <p>2018 전산세무 2급 / 전산회계 1급</p>
+                            <p>2016 컴퓨터활용능력 2급</p>
+                            <p>2015 ERP 회계정보관리사 2급</p>
+                        </div>
                     </div>
                     <div class="skills">
                         <h4>SKILLS</h4>
-                        
+                        <div class="box">
+                            <span>Figma</span>
+                            <span>Html</span>
+                            <span>Css</span>
+                            <span>Javascript</span>
+                            <span>JQuery</span>
+                            <p>이 외에도 Python, Java, C++을 다뤄본 경험이 있습니다.</p>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -93,6 +109,9 @@
                             <a href="#">PROJECT_B</a>
                         </li>
                     </ul>
+                </div>
+                <div class="txt">
+                    <p>Mouse Hover!</p>
                 </div>
                 <div id="project-a" class="project-box on">
                     <div class="left">
@@ -126,7 +145,7 @@
                             </div>    
                             <div class="moreview">
                                 <a href="https://minileejim.github.io/www/project/html/youngjin.html" target="_blank">MORE VIEW</a>
-                                <a href="#">UI 정의서</a>
+                                <a href="https://runauxlabs.github.io/portfolio/ui/ljm_ui.pdf" target="_blank">UI 정의서</a>
                             </div>
                         </div>
                     </div>
@@ -171,13 +190,48 @@
         </div>
         <div class="slide vertical-slide sec04">
             <div class="contents">
-                CONTACT
+                <h2>CONTACT</h2>
+                <div class="mynum">
+                    <div>
+                        <span class="material-symbols-outlined">
+                            call
+                        </span>
+                        <span>010 2503 9687</span>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined">
+                            alternate_email
+                        </span>
+                        <span>dlwlals0515@gmail.com</span>
+                    </div>
+                </div>
+                <form id="contactForm" class="mail">
+                    <div>
+                        <div>
+                            <p>보내는 사람</p>
+                            <input type="text" id="from_name" name="to_name" placeholder="이름"/>
+                        </div>
+                        <div>
+                            <p>연락가능한 이메일</p>
+                            <input type="email" id="from_mail" name="to_mail" placeholder="이메일"/>
+                            <p class="caution">이메일 형식이 잘못되었습니다.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <textarea name="message" placeholder="보내는 내용"></textarea>
+                    </div>  
+                    <div>
+                        <input type="submit" value="보내기" />
+                        <input type="reset" value="초기화" />
+                    </div>      
+                </form>
             </div>
         </div>
     </div>
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="/www/web/js/jquery-3.6.0.min.js"></script>
     <script src="/www/web/slick-1.8.1/slick/slick.min.js"></script>
     <script src="/www/web/js/jquery-mousewheel-3.1.13.min.js"></script>

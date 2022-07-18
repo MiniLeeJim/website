@@ -5,7 +5,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     font-family: 'Dosis';
     letter-spacing: 1px;
     word-break: keep-all;
@@ -14,7 +14,7 @@
 :root{
     --sec01-h1-font: 400 100px 'Dosis';
     --font-color: #353535;
-    --hover-color: rgb(127, 152, 175);
+    --hover-color: rgb(146, 174, 199);
     --youngjin-color: #E9EEF0;
 }
 
@@ -145,7 +145,40 @@ nav.on{
 }
 
 /*sec02*/
-.sec02{ background-color: skyblue; }
+.sec02{ background-color: var(--hover-color); }
+.sec02 .contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sec02 .contents .info{
+    width: 50%;
+    border: 1px solid rgb(70, 85, 100);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.sec02 .contents > h2{
+    font-size: 40px;
+    margin: 90px 0 30px;
+}
+.sec02 .contents .info > div{
+    margin: 20px;
+}
+.sec02 .contents .info h4{ font-size: 20px; }
+.sec02 .contents .info .box{
+    margin-left: 20px;
+    font-size: 18px;
+}
+.sec02 .contents .info .box span{ 
+    padding: 5px 0;
+    display: inline-block;
+}
+.sec02 .contents .info .box p{
+    padding: 5px 0;
+    font: 400 18px '맑은 고딕', 'sans-serif';
+}
+.sec02 .contents .info .skills span{ padding: 5px 5px; }
+.sec02 .contents .info .skills p{ font-size: 16px; opacity: 0.5; }
+
 
 /******/
 
@@ -157,6 +190,7 @@ nav.on{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .sec03 .tap-tit{
     width: 90%;
@@ -164,7 +198,6 @@ nav.on{
     justify-content: flex-end;
     position: relative;
 }
-
 .sec03 .tap-tit ul{
     height: 50px;
     display: flex;
@@ -182,6 +215,16 @@ nav.on{
     padding: 0 20px;
     color: var(--font-color);
 }
+
+.sec03 .contents > .txt{
+    position: absolute;
+    left: 7%;
+    top: calc(50% - 140px);
+    z-index: 100;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
 .sec03 .project-box{
     width: 90%;
     min-height: 550px;
@@ -279,15 +322,89 @@ nav.on{
     background-color: var(--youngjin-color);
 }
 .sec03 .project-box .info .moreview > a:last-child{ margin-left: 40px; }
+.sec03 .project-box .info .moreview > a:hover{ opacity: 0.7; }
+
+.sec03 .tap-tit ul > li:nth-child(2).on > a{ background-color: rgb(98, 136, 113); }
+.sec03 #project-b.project-box .left{ background-color: rgb(231, 241, 235, 0.2);}
+.sec03 #project-b.project-box .right::before{ background-color: rgb(98, 136, 113); }
+.sec03 #project-b.project-box .info .moreview > a{
+    border: 1px solid rgb(98, 136, 113);
+    background-color: rgb(170, 197, 181);
+}
+.sec03 #project-b.project-box .info .main-color .co01, 
+.sec03 #project-b.project-box .info .main-color .co02{ border: 1px solid rgb(98, 136, 113); }
 
 .sec03 .project-box{ display: none; }
 .sec03 .project-box.on{ display: flex; }
-
-
 /******/
 
 
 /*sec04*/
-.sec04{ background-color: royalblue; }
-
+.sec04{ background-color: var(--hover-color); }
+.sec04 .contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sec04 .contents > h2{
+    font-size: 40px;
+    margin: 90px 0 50px;
+}
+.sec04 .mynum{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sec04 .mynum > div{ display: flex; }
+.sec04 .mynum > div{ margin: 10px 0; }
+.sec04 .mynum > div > span:first-child{ font-size: 40px; }
+.sec04 .mynum > div > span:last-child{
+    margin-left: 10px;
+    font-size: 30px;
+}
+.sec04 form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+.sec04 form > div{ width: 100%; }
+.sec04 form > div:first-child{
+    display: flex;
+    justify-content: center;
+}
+.sec04 form > div:first-child > div{ margin: 0 10px; }
+.sec04 form > div:first-child > div > p{
+    font-size: 16px;
+    opacity: 0.5;
+}
+.sec04 form > div:first-child > div .caution{
+    visibility: hidden;
+    font-size: 14px;
+    opacity: 1;
+    color: red;
+}
+.sec04 form > div:first-child > div .caution.on{ visibility: visible; }
+.sec04 form > div:nth-child(2){margin-bottom: 10px;}
+.sec04 form input[name = "to_name"],
+.sec04 form input[name = "to_mail"]{
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+}
+.sec04 form textarea{
+    display: block;
+    width: 100%;
+    height: 200px;
+    font-size: 18px;
+}
+.sec04 form > div:last-child{
+    display: flex;
+    justify-content: center;
+}
+.sec04 form > div:last-child > input{
+    margin: 0 5px;
+    padding: 5px 15px;
+}
 /******/
