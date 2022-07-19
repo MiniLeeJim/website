@@ -153,7 +153,7 @@ nav.on{
 }
 .sec02 .contents .info{
     width: 50%;
-    border: 1px solid rgb(70, 85, 100);
+    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.7);
 }
 .sec02 .contents > h2{
@@ -161,7 +161,7 @@ nav.on{
     margin: 90px 0 30px;
 }
 .sec02 .contents .info > div{
-    margin: 20px;
+    margin: 30px;
 }
 .sec02 .contents .info h4{ font-size: 20px; }
 .sec02 .contents .info .box{
@@ -190,7 +190,6 @@ nav.on{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 .sec03 .tap-tit{
     width: 90%;
@@ -216,15 +215,6 @@ nav.on{
     color: var(--font-color);
 }
 
-.sec03 .contents > .txt{
-    position: absolute;
-    left: 7%;
-    top: calc(50% - 140px);
-    z-index: 100;
-    font-size: 20px;
-    opacity: 0.5;
-}
-
 .sec03 .project-box{
     width: 90%;
     min-height: 550px;
@@ -237,6 +227,14 @@ nav.on{
     height: 100%;
     position: relative;
     background-color: rgba(233, 238, 240, 0.2);
+}
+.sec03 .contents .left > .txt{
+    position: absolute;
+    left: 5%;
+    top: 60px;
+    z-index: 100;
+    font-size: 20px;
+    opacity: 0.7;
 }
 
 .sec03 .left .web{
@@ -311,7 +309,7 @@ nav.on{
 }
 .sec03 #project-a .info .main-color .co01{ background-color: #fff; }
 .sec03 #project-a .info .main-color .co02{ background-color: var(--youngjin-color); }
-.sec03 .project-box .info .wrap-box{ margin: 30px 0; }
+.sec03 .project-box .info .wrap-box{ margin: 0 0 30px; }
 .sec03 .project-box .info .wrap-box > div{ padding: 20px 0; }
 .sec03 .project-box .info .moreview > a{
     font: 400 18px '맑은 고딕', 'sans-serif';
