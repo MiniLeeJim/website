@@ -5,7 +5,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
     font-family: 'Dosis';
     letter-spacing: 1px;
     word-break: keep-all;
