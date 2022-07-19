@@ -49,25 +49,37 @@ $(function(){
             }
         }
     });
-    
+
+    //목차, 나브 누르면 해당 슬라이드로 이동 1200초과
+    $('nav ul li, .sec01 ul li').on('click', function(){
+        $('.vertical-slider').slick('slickGoTo', $(this).data('index'));
+    });
+    //목차, 나브 누르면 해당 슬라이드로 이동 1200이하
+    $('nav ul li, .sec01 ul li').each(function() {
+        var thisOffset = $('.' + $(this).data('id')).offset().top;
+
+        $(this).click(function() {
+            $('html, body').animate({
+                scrollTop: thisOffset
+            }, 500);
+        });
+    });
     
 
     //2번째 슬라이드 부터 나브 표출
-    // $('.vertical-slider').on('afterChange', function(){
-    //     if(!$(this).slick('slickCurrentSlide') == 0){
-    //         $('nav').addClass('on');
-    //     } else{
-    //         $('nav').removeClass('on');
-    //     }
-    // });
-
-    //목차, 나브 누르면 해당 슬라이드로 이동
-    $('nav ul li, .sec01 ul li').on('click', function(){
-        $('.vertical-slider').slick('slickGoTo', $(this).data("index"));
+    $('.vertical-slider').on('afterChange', function(){
+        if(!$(this).slick('slickCurrentSlide') == 0){
+            $('nav').addClass('on');
+        } else{
+            $('nav').removeClass('on');
+        }
     });
 
+    
+
     //project 탭 누를때
-    $('.sec03 .tap-tit li').on('click', function(){
+    $('.sec03 .tap-tit li').on('click', function(e){
+        e.preventDefault();
         $(this).addClass('on').siblings().removeClass('on');
         $('#'+$(this).data('id')).addClass('on').siblings().removeClass('on');
     })

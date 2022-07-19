@@ -223,9 +223,12 @@ nav.on{
     color: var(--font-color);
 }
 .sec03 .project-box .left{
-    width: 40%;
+    width: 610px;
     height: 100%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(233, 238, 240, 0.2);
 }
 .sec03 .contents .left > .txt{
@@ -239,9 +242,7 @@ nav.on{
 
 .sec03 .left .web{
     position: relative;
-    left: 10%;
-    top: 100px;
-    max-width: 500px;
+    width: 500px;
     height: 300px;
     overflow: hidden;
 }
@@ -256,10 +257,10 @@ nav.on{
 .sec03 .left .web:hover{ z-index: 200; }
 .sec03 #project-a .left .web:hover .web-img{top: -500px; }
 .sec03 .left .mobile{
-    position: relative;
-    left: 70%;
-    top: -60px;
-    max-width: 150px;
+    position: absolute;
+    right: 5%;
+    top: 250px;
+    width: 150px;
     height: 220px;
     overflow: hidden;
 }

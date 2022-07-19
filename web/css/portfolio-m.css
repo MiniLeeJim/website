@@ -10,6 +10,9 @@ nav > ul > li > a{
     font-size: 20px;
 }
 
+.sec01 .wheel{ display: none; }
+
+
 .sec02 .contents .info{ width: 90%; }
 .sec02 .contents .info h4{ font-size: 18px; }
 .sec02 .contents .info .box,
@@ -18,13 +21,13 @@ nav > ul > li > a{
 .sec03 .tap-tit ul > li > a{ font-size: 22px; }
 .sec03 .project-box .left{ height: 280px; }
 .sec03 .left .web{
-    left: calc(50% - 200px);
-    max-width: 300px;
+    width: 300px;
     height: 200px;
 }
 .sec03 .left .mobile{
-    left: calc(50% + 50px);
-    top: -100px;
+    left: auto;
+    right: 10%;
+    top: 100px;
     max-width: 100px;
     height: 160px;
 }
