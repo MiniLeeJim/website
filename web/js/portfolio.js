@@ -1,39 +1,65 @@
 $(function(){
     //풀페이지 슬라이드
-    $('.vertical-slider').slick({
+    let thisPc = true;
+    let slider = $('.vertical-slider');
+    let slickOptions = {
         arrows: false,
         dots: false,
         infinite: false,
         vertical: true,
         verticalSwiping: true,
-    });
+    };
+    slider.slick(slickOptions);
 
-    $('.vertical-slider').mousewheel(function(e){
-        if(e.deltaY < 0){
-            if($(this).slick('slickCurrentSlide') == $(this).find('.slide').length - 1){
-                return;
-            }
+    //화면이 로드, 리사이즈 되면 슬릭 반응
+    if($(window).width() <= 1200){
+        thisPc = false;
+        slider.slick('unslick');
+    } else{
+        thisPc = true; 
+        slider.not('.slick-initialized').slick(slickOptions);
+    }
 
-            e.preventDefault();
-            $(this).slick('slickNext');
+    $(window).on('resize', function(){
+        if($(window).width() <= 1200){
+            slider.slick('unslick');
+            thisPc = false;
         } else{
-            if ($(this).slick('slickCurrentSlide') == 0) {
-                return;
-            }
-
-            e.preventDefault();
-            $(this).slick('slickPrev');
+            slider.not('.slick-initialized').slick(slickOptions);
+            thisPc = true; 
         }
     });
+   
+    $('.vertical-slider').mousewheel(function(e){
+        if(thisPc === true){
+            if(e.deltaY < 0){
+                if($(this).slick('slickCurrentSlide') == $(this).find('.slide').length - 1){
+                    return;
+                }
+
+                e.preventDefault();
+                $(this).slick('slickNext');
+            } else{
+                if ($(this).slick('slickCurrentSlide') == 0) {
+                    return;
+                }
+
+                e.preventDefault();
+                $(this).slick('slickPrev');
+            }
+        }
+    });
+    
+    
 
     //2번째 슬라이드 부터 나브 표출
-    $('.vertical-slider').on('afterChange', function(){
-        if(!$(this).slick('slickCurrentSlide') == 0){
-            $('nav').addClass('on');
-        } else{
-            $('nav').removeClass('on');
-        }
-    });
+    // $('.vertical-slider').on('afterChange', function(){
+    //     if(!$(this).slick('slickCurrentSlide') == 0){
+    //         $('nav').addClass('on');
+    //     } else{
+    //         $('nav').removeClass('on');
+    //     }
+    // });
 
     //목차, 나브 누르면 해당 슬라이드로 이동
     $('nav ul li, .sec01 ul li').on('click', function(){
@@ -72,5 +98,6 @@ $(function(){
     $('input[type=reset]').on('click', function(){
         $('.caution').removeClass('on');
     });
+
  
 });
