@@ -15,6 +15,7 @@ $(function(){
     if($(window).width() <= 1200){
         thisPc = false;
         slider.slick('unslick');
+        $('nav').addClass('on');
     } else{
         thisPc = true; 
         slider.not('.slick-initialized').slick(slickOptions);
@@ -22,6 +23,7 @@ $(function(){
 
     $(window).on('resize', function(){
         if($(window).width() <= 1200){
+            $('nav').addClass('on');
             slider.slick('unslick');
             thisPc = false;
         } else{
@@ -64,7 +66,6 @@ $(function(){
             }, 500);
         });
     });
-    
 
     //2번째 슬라이드 부터 나브 표출
     $('.vertical-slider').on('afterChange', function(){
@@ -74,6 +75,7 @@ $(function(){
             $('nav').removeClass('on');
         }
     });
+
 
     
 
