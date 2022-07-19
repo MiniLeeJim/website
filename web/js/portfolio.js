@@ -71,5 +71,6 @@ $(function(){
 
     $('input[type=reset]').on('click', function(){
         $('.caution').removeClass('on');
-    })
+    });
+ 
 });
