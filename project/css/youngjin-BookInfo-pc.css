@@ -172,7 +172,7 @@ header .bottom .menu{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-bottom: 4px solid #939393;
+    border-bottom: 3px solid var(--main-color);
     padding: 20px 0 0 20px;
 }
 
@@ -225,7 +225,7 @@ header .bottom .menu{
     display: flex;
     align-items: center;
     gap: 60px;
-    border-bottom: 4px solid #939393;
+    border-bottom: 3px solid var(--main-color);
 }
 .sec2 .img_book{
     width: 320px;
@@ -263,7 +263,7 @@ header .bottom .menu{
 }
 .sec2 .box_word .bt{
     padding: 12px 40px;
-    border: 1px solid #000;
+    border: 1px solid var(--main-color);
     font: var(--list-font);
 }
 
