@@ -7,6 +7,7 @@
     box-sizing: border-box;
     /* outline: 1px solid pink; */
     letter-spacing: -0.05em;
+    word-break: keep-all;
     color: var(--main-color);
 }
 
@@ -20,7 +21,7 @@
     --sec-title-font : 700 26px 'Inter';
     --list-font : 400 20px 'Inter';
     --year-font : 700 40px 'Inter';
-    --info-font : 400 18px 'Inter';
+    --info-font : 400 17px 'Inter';
     --footer-font : 400 16px 'Inter';
 }
 
@@ -177,7 +178,9 @@ header .bottom .menu{
 
 .sec1 .path{ font: var(--top-title-font); }
 .sec1 > div > span::after{ content: ' > '; }
-.sec1 > div > span:nth-child(3)::after{ content: ''; }
+.sec1 > div > span:last-child::after{ content: ''; }
+.sec1 .middle{ display: none; }
+.sec1 .middle.on{ display: inline; }
 .sec1 .mini_title { font-weight: 700;} 
 .sec1 .sub_title{
     font: var(--sec-title-font);
@@ -186,7 +189,7 @@ header .bottom .menu{
 
 .contents .snb{
     width: 180px;
-    height: 350px;
+    /* height: 350px; */
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -203,11 +206,7 @@ header .bottom .menu{
     text-align: center;
     cursor: pointer;
 }
-.snb li:nth-child(1){
-    font-weight: 700;
-    background: #ddd;
-}
-.snb li:nth-child(3){
+.snb.it li:nth-child(3){
     letter-spacing: -0.2em;
     font-size: 16px;
 }
@@ -231,15 +230,16 @@ header .bottom .menu{
 .sec2 .img_book{
     width: 320px;
     height: 384px;
-    background: #ddd;
+    /* background: #ddd; */
 }
 .sec2 .box_word{
-    width: 320px;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 .sec2 .box_info{
+    width: 320px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -256,6 +256,7 @@ header .bottom .menu{
     font: var(--info-font);
 }
 .sec2 .box_word > div:last-child{
+    max-width: 320px;
     margin: 30px 0 0 0;
     display: flex;
     justify-content: space-between;
@@ -271,7 +272,7 @@ header .bottom .menu{
     padding: 50px 0 200px 25px;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 50px;
 }
 .sec3 .title{
     padding: 40px 0 5px 0;
@@ -286,6 +287,7 @@ header .bottom .menu{
 .sec3 .box_word{
     padding: 20px 20px 20px 15px;
     font: var(--info-font);
+    letter-spacing: 0;
     line-height: 28px;
 }
 .intro_book .img_pre{ background: url(/www/project/images/book.svg) no-repeat center; }

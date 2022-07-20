@@ -1,0 +1,102 @@
+var bookList = {
+    "newbook" : [
+        {
+            "code" : "B03",
+            "subTitle" : "기타",
+            "image" : "/www/project/images/00신간도서-ncs.png",
+            "title" : "2022 NCS직업기초능력평가 입문서(고졸채용&초보자용)",
+            "writer" : "NCS CREW",
+            "page" : "576",
+            "price" : "18,000",
+            "publicationDate" : "2022-02-28",
+            "isbn" : "9788931464894",
+            "bookIntroduce" : "본 도서는 2022년의 공공기관 및 일반기업의 최신 채용 정보와 출제 경향을 반영하여 NCS 직업기초능력평가 시험을 처음 준비하시는 분들을 위해 만든 최적의 기본서입니다. 고졸 채용 준비생과 입문 초보자들을 위하여 NCS 직업기초능력평가의 전반적인 이해부터 시작하여 이론과 문제 유형 파악까지 단기완성으로 끝낼 수 있습니다.<br><br>방대한 NCS 이론을 1/10 분량으로 압축 정리하여 학습 시간을 단축시켰고 독학 수험생의 이해도를 높이기 위한 핵심 이론 강의까지 무료로 제공하고 있습니다. 또한 최신 출제경향을 반영한 문제들을 모듈형/피셋형/피듈형으로 나눠 모든 시험 유형에 대비가 가능하도록 구성하였습니다. 목표로 하는 시험 유형별로 학습할 수 있을 뿐만 아니라, 영역별로 필기 시험이 실제로 어떻게 출제되고 있는지 충분히 공부할 수 있습니다. 특히 의/수/문 영역의 빈출 유형을 집중 분석하여 유형별로 풀이 시간을 단축하는 문제 접근법과 계산법을 정리했습니다. 마무리로 실전 대비용 모의고사를 가장 많이 영역별로 다르게 3회분을 수록하여 시험 준비를 완벽히 할 수 있습니다. 추가 부록으로 누구나 쉽게 시작할 수 있도록 자소서/지원서를 어떻게 쓰면 좋을지 문항별로 분석하여 가이드를 제공하고, 셀프로 체크해 볼 수 있는 면접 가이드를 제공합니다. 단 한 권으로 서류부터 필기와 면접까지 준비할 수 있는 이기적 수험서로 2022년 취뽀하세요!",
+            "writerIntroduce" : "- 2022년 최신 공기업 채용정보 수록!<br>2022년 NCS전형 채용을 진행하는 공기업들의 주요 리스트와 채용 박람회에서 발표한 채용 인원, 기업별 정보까지 모두 정리하여 수험생들이 최신 공기업 채용 정보를 한눈에 파악하고 준비할 수 있도록 하였습니다.<br><br>- 분량은 DOWN! 이해도는 UP!<br>개정된 NCS 학습모듈 이론을 1/10의 양으로 압축 정리하여 학습량은 줄이되, 놓치지 않는 설명으로 초보 준비생도 쉽게 이해할 수 있도록 하는 데 중점을 두었습니다. 추가 설명이 필요한 독학러를 위해 핵심 이론만 따로 설명하는 동영상 강의도 무료로 제공하고 있으며, 최신 경향을 반영한 영역별 출제 예상문제에 모듈형/피듈형/피셋형 고루 수록하여 어떤 시험 유형도 대비할 수 있도록 하였습니다.<br><br>- NCS 전문 강사진이 공개하는 빈출 유형 풀이 시간 단축 TIP<br>가장 핵심 영역인 의사소통능력, 수리능력, 문제풀이능력의 빈출 유형만 집중 분석하여 각 유형별로 문제풀이 시간을 단축할 수 있는 접근법과 쉬운 계산법 TIP을 Part11에 모아 정리하였습니다. 5,000번이 넘는 강의 경력을 가진 NCS 전문 강사 선생님이 공개하는 알짜배기 팁을 확인해 보세요!<br><br>- 실제 기관 문항 개발팀이 직접 출제한 실전 모의고사 3회!<br>최신 기출 유형을 반영한 실전 모의고사 3회와 OMR카드를 제공합니다. 마킹까지 시간관리를 철저히 할 수 있습니다. 실제 기관의 문항 개발팀이 직접 출제한 모의고사 문제로 실전력을 업그레이드 해보세요. 기업별로 출제영역이 다르다는 점을 반영하여, 3회차 모두 출제 영역을 다르게 구성하였습니다.<br><br>- NCS 채용 서류부터 필기, 면접까지 한 권으로 준비 완료!<br>누구나 혼자서도 쉽게 서류 작성과 면접을 준비할 수 있도록 완벽 가이드를 준비했습니다. 자소서 문항별로 어떻게 써야 하는지, 면접에서 대답은 어떻게 하는 게 좋은지, 실제 기관별 면접 질문까지 모두 들어있습니다. 단 한 권으로 서류, 필기, 면접 전형까지 한 번에 준비하세요.<br><br>- 랜선 선생님의 실시간 질문답변 서비스!<br>공부하다 궁금한 내용이 있다면 NCS 강사님이 상주하는 카카오톡 오픈채팅방을 통해 질문해보세요. 나만의 랜선 선생님이 독학 수험생들을 위하여 질문답변 해드리고 있습니다!",
+            "index" : "저자 소개<br>차례<br>이 책의 구성<br>이기적 합격 서비스 혜택<br>NCS 소개<br>기업별 NCS 채용정보<br>NCS Q&A<br><br>PART 1 의사소통능력<br>- CHAPTER 1 의사소통능력 이론<br>- CHAPTER 2 의사소통능력 출제 예상문제<br><br>PART 2 수리능력<br>- CHAPTER 1 수리능력 이론<br>- CHAPTER 2 수리능력 출제 예상문제<br><br>PART 3 문제해결능력<br>- CHAPTER 1 문제해결능력 이론<br>- CHAPTER 2 문제해결능력 출제 예상문제<br><br>PART 4 자기개발능력<br>- CHAPTER 1 자기개발능력 이론<br>- CHAPTER 2 자기개발능력 출제 예상문제<br><br>PART 5 자원관리능력<br>- CHAPTER 1 자원관리능력 이론<br>- CHAPTER 2 자원관리능력 출제 예상문제<br><br>PART 6 대인관계능력<br>- CHAPTER 1 대인관계능력 이론<br>- CHAPTER 2 대인관계능력 출제 예상문제<br><br>PART 7 정보능력<br>- CHAPTER 1 정보능력 이론<br>- CHAPTER 2 정보능력 출제 예상문제<br><br>PART 8 기술능력<br>- CHAPTER 1 기술능력 이론<br>- CHAPTER 2 기술능력 출제 예상문제<br><br>PART 9 조직이해능력<br>- CHAPTER 1 조직이해능력 이론<br>- CHAPTER 2 조직이해능력 출제 예상문제<br><br>PART 10 직업윤리<br>- CHAPTER 1 직업윤리 이론<br>- CHAPTER 2 직업윤리 출제 예상문제<br><br>PART 11 빈출 유형 완전 정복<br>- CHAPTER 1 의사소통능력 빈출 유형 분석<br>- CHAPTER 2 수리능력 빈출 유형 분석<br>- CHAPTER 3 문제해결능력 빈출 유형 분석<br><br>PART 12 실전 모의고사<br>- CHAPTER 1 실전 모의고사 1회<br>- CHAPTER 2 실전 모의고사 2회<br>- CHAPTER 3 실전 모의고사 3회<br><br>PART 13 자소서면접 완벽 가이드<br>- CHAPTER 1 쉽게 시작하는 지원서/자소서 작성<br>- CHAPTER 2 혼자서도 가능한 셀프 면접 스터디<br><br>PART 14 정답 및 해설<br>- CHAPTER 1 출제 예상문제 정답 및 해설<br>- CHAPTER 2 실전 모의고사 정답 및 해설<br><br><br>PART 15 부록 - 한국산업인력공단 공개 예제 문항&정답",
+            "index2" : "",
+            "index3" : ""
+        },
+        {
+            "code" : "B03",
+            "subTitle" : "기타",
+            "image" : "/www/project/images/01신간도서-sw코딩자격엔트리.png",
+            "title" : "이기적 SW코딩자격 2급 엔트리(2022)",
+            "writer" : "이민경, 최경희",
+            "page" : "352",
+            "price" : "18,000",
+            "publicationDate" : "2022-05-09",
+            "isbn" : "9788931463521",
+            "bookIntroduce" : "본 도서는 한국생산성본부에서 시행하는 SW코딩자격 2급 엔트리 버전 시험을 준비하는 분들이 효과적으로 시험에 대비할 수 있도록 구성된 도서입니다. SW코딩자격 2급의 출제 기준과 공개 문제를 자세히 분석하여 문제 해결과 알고리즘 설계에 관한 이론, 엔트리 핵심 기능 그리고 시험에서 자주 출제될 기능에 관한 자세한 설명을 수록하였습니다. 또한, 실전과 동일 문제를 체험할 수 있도록 기출 유형 문제 8회분을 수록하였습니다. 기출 유형 문제 8회분에 수록되어 있는 다양 문제를 풀어보면 자연스레 실제 시험에서 출제될 다양한 유형의 문제에 익숙해질 수 있을 것입니다. 도서의 자세한 설명 외에도 엔트리 코딩 풀이 부분을 쉽게 따라 할 수 있도록 무료 동영상을 제공하므로, 초심자도 영상을 통해 엔트리 코딩을 쉽게 따라할 수 있을 것입니다.<br>자세한 설명과 다양한 문제를 제공하는 <이기적 SW코딩자격 2급 엔트리> 도서로 알차게 합격하세요.",
+            "writerIntroduce" : "",
+            "index" : "PART 1 SW코딩자격 이렇게 준비하세요<br>CHAPTER 01 시험 안내<br>CHAPTER 02 시험 소개<br>CHAPTER 03 엔트리 프로그램 설치하기<br><br>PART 2 문제 해결과 알고리즘 설계<br>CHAPTER 01 컴퓨팅 사고력과 문제해결<br>CHAPTER 02 알고리즘 설계, 순서도<br><br>PART 3 피지컬 컴퓨팅<br>CHAPTER 01 융합과 피지컬 컴퓨팅<br>CHAPTER 02 소프트웨어를 이용한 하드웨어 작동 원리 이해<br><br>PART 4 엔트리 핵심 기능 익히기<br>CHAPTER 01 엔트리 기본 화면 구성<br>CHAPTER 02 오브젝트 살펴보기<br>CHAPTER 03 모양과 소리 사용하기<br>CHAPTER 04 속성 추가하여 사용하기<br>CHAPTER 05 엔트리 블록 살펴보기<br>CHAPTER 06 파일 열기 및 저장하기<br><br>PART 5 주요 출제 기능 익히기<br>CHAPTER 01 순차 구조, 반복 구조<br>CHAPTER 02 조건별 실행<br>CHAPTER 03 변수, 리스트, 함수<br>CHAPTER 04 복제, 연산자<br><br>PART 6 최신 기출 유형 따라하기<br>CHAPTER 01 최신 기출 유형 따라하기 1회<br>CHAPTER 02 최신 기출 유형 따라하기 2회<br><br>PART 7 최신 기출 유형 문제<br>CHAPTER 01 최신 기출 유형 문제 1회<br>CHAPTER 02 최신 기출 유형 문제 2회<br>CHAPTER 03 최신 기출 유형 문제 3회<br>CHAPTER 04 최신 기출 유형 문제 4회<br>CHAPTER 05 최신 기출 유형 문제 5회<br>CHAPTER 06 최신 기출 유형 문제 6회<br><br>PART 8 최신 기출 유형 문제 풀이<br>CHAPTER 01 최신 기출 유형 문제 1회 풀이<br>CHAPTER 02 최신 기출 유형 문제 2회 풀이<br>CHAPTER 03 최신 기출 유형 문제 3회 풀이<br>CHAPTER 04 최신 기출 유형 문제 4회 풀이<br>CHAPTER 05 최신 기출 유형 문제 5회 풀이<br>CHAPTER 06 최신 기출 유형 문제 6회 풀이",
+            "index2" : "",
+            "index3" : ""
+        },
+        {
+            "code" : "A03",
+            "subTitle" : "정보처리/사무자동화/정보기기",
+            "image" : "/www/project/images/02신간도서-정보처리산업기사.png",
+            "title" : "2022 이기적 정보처리산업기사 실기 기본서",
+            "writer" : "고소현, 한진만 공저",
+            "page" : "512",
+            "price" : "30,000",
+            "publicationDate" : "2022-04-05",
+            "isbn" : "9788931464580",
+            "bookIntroduce" : "2022년부터 바뀌는 정보처리산업기사 실기! 출제기준을 완벽하게 반영한 정보처리산업기사 실기 수험서가 이기적에서 출간되었습니다. 지금 준비해도 늦지 않았어요! 핵심이론만 쏙쏙 골라 담은 이론 부분을 공부한 후, 기출 예상 문제 15회까지 풀어보면 시험 준비 완료입니다. 이기적 스터디 카페에서 1:1 질문하기를 통해 저자분과 직접 질문 답변을 하는 것도 가능하니, 많이 방문해서 올해는 정보처리산업기사 합격에 꼭 성공하세요!!",
+            "writerIntroduce" : "",
+            "index" : "[1권]<br>시험은 이렇게 출제된다<br>차례<br>이 책의 구성<br>시험 안내<br>자주 질문하는 Q&A<br><br>PART 01 응용 SW 기초 기술 활용<br>Chapter 01 운영체제 기초 활용<br>- Section 01 명령어와 주소체계<br>- Section 02 운영체제<br>- Section 03 기억장치 관리<br>- Section 04 프로세스 스케줄링<br>Chapter 02 데이터베이스 기초 활용<br>- Section 01 데이터베이스 관리 시스템(DBMS)<br>- Section 02 관계형 데이터베이스<br>- Section 03 논리 데이터 모델링<br>- Section 04 E-R 다이어그램<br>- Section 05 정규화<br>- Section 06 트랜잭션<br>- Section 07 병행제어와 로킹<br>- Section 08 데이터베이스 기술 용어<br>Chapter 03 네트워크 기초 활용<br>- Section 01 통신 프로토콜<br>- Section 02 인터넷 프로토콜<br>- Section 03 통신망 기술<br>- Section 04 네트워크 기술 용어<br>Chapter 04 기본 개발환경 구축<br>- Section 01 소프트웨어 개발환경 분석<br>- Section 02 요구사항 정의<br>- Section 03 UML<br>- Section 04 신기술 용어<br><br>PART 02 UI 테스트<br>Chapter 01 사용성 테스트 계획<br>- Section 01 테스트 기법 선정<br>- Section 02 사용성 테스트 환경 구축<br>- Section 03 사용성 테스트 계획서 작성<br>Chapter 02 사용성 테스트 수행<br>- Section 01 사용성 테스트 수행<br>- Section 02 평가 분석서 작성 및 이슈 도출<br>Chapter 03 테스트 결과 보고<br>- Section 01 UI 개선방안 및 수정계획 수립<br>- Section 02 UI 개선 결과 보고서 공유<br><br>PART 03 화면 구현<br>Chapter 01 UI 설계<br>- Section 01 UI 표준<br>- Section 02 UI 요구사항<br>- Section 03 UI 설계<br>Chapter 02 애플리케이션 설계<br>- Section 01 소프트웨어 아키텍처<br>- Section 02 디자인 패턴<br>- Section 03 공통모듈<br>- Section 04 모듈의 성능 평가<br><br>PART 04 프로그래밍 언어 활용<br>Chapter 01 프로그래밍 개발 환경 구축<br>- Section 01 프로그램 개발 환경 구성<br>- Section 02 프로그래밍 언어<br>- Section 03 프로그래밍 기본 개념<br>Chapter 02 절차지향 프로그래밍 언어<br>- Section 01 데이터 가공 및 입출력<br>- Section 02 선택 및 반복 제어문<br>- Section 03 자료구조와 포인터<br>Chapter 03 객체지향 프로그래밍 언어<br>- Section 01 객체지향 기술<br>- Section 02 클래스와 객체<br>- Section 03 상속과 오버라이딩<br>- Section 04 예외처리<br>Chapter 04 스크립트 프로그래밍 언어<br>- Section 01 데이터 가공 및 입출력<br>- Section 02 자료구조<br>- Section 03 선택 및 반복 제어문<br>- Section 04 클래스와 메소드<br><br>PART 05 SQL 활용<br>Chapter 01 기본 SQL 작성<br>- Section 01 SQL의 개요<br>- Section 02 데이터 정의어(DDL)<br>- Section 03 데이터 조작어(DML)<br>- Section 04 데이터 제어어(DCL)<br>Chapter 02 고급 SQL 작성<br>- Section 01 인덱스와 뷰<br>- Section 02 SQL 지원도구<br><br>PART 06 애플리케이션 테스트 수행<br>Chapter 01 애플리케이션 테스트 수행<br>- Section 01 애플리케이션 테스트<br>- Section 02 개발 단계에 따른 애플리케이션 테스트<br>Chapter 02 애플리케이션 결함 조치<br>- Section 01 결함 관리<br><br>PART 07 애플리케이션 배포<br>Chapter 01 통합 구현<br>- Section 01 통합 구현 도구<br>- Section 02 성능 분석 및 품질 평가<br>Chapter 02 제품 소프트웨어 패키징<br>- Section 01 제품 소프트웨어 패키징<br>- Section 02 제품 소프트웨어 매뉴얼<br>- Section 03 제품 소프트웨어 버전 관리<br><br>",
+            "index2" :"[2권]<br>PART 08 기출 예상 문제<br>Chapter 01 기출 예상 문제 1~15회<br>Section 01 기출 예상 문제 1회<br>Section 02 기출 예상 문제 2회<br>Section 03 기출 예상 문제 3회<br>Section 04 기출 예상 문제 4회<br>Section 05 기출 예상 문제 5회<br>Section 06 기출 예상 문제 6회<br>Section 07 기출 예상 문제 7회<br>Section 08 기출 예상 문제 8회<br>Section 09 기출 예상 문제 9회<br>Section 10 기출 예상 문제 10회<br>Section 11 기출 예상 문제 11회<br>Section 12 기출 예상 문제 12회<br>Section 13 기출 예상 문제 13회<br>Section 14 기출 예상 문제 14회<br>Section 15 기출 예상 문제 15회<br><br>PART 09 정답 및 해설<br>Chapter 01 기출 예상 문제 1~15회 정답 및 해설",
+            "index3" : ""
+        }
+    ],
+    "bestbook" : [
+        {
+            "code" : "A03",
+            "subTitle" : "정보처리/사무자동화/정보기기",
+            "image" : "/www/project/images/00추천도서-정보처리산업기사.png",
+            "title" : "2022 이기적 정보처리산업기사 필기 기본서",
+            "writer" : "최희준, 영진정보연구소",
+            "page" : "832",
+            "price" : "30,000",
+            "publicationDate" : "2021-09-17",
+            "isbn" : "9788931465297",
+            "bookIntroduce" : "본 도서는 필기 시험을 준비하는 수험생을 위한 기본서로서 다년간의 출제 경향을 철저히 분석하여 2022년부터 변경되는 NCS 기반 출제기준에 맞춰 출간되었습니다.<br>시험대비 이론을 꼼꼼하게 다루었으며, 출제기준에 맞춰 다양한 유형의 예상문제와 모의고사를 수록하였습니다.",
+            "writerIntroduce" : "",
+            "index" : "2022 출제 기준안 변경시험 출제 경향<br>차례<br>베타테스터 후기<br>15일 학습플랜<br>이 책의 구성<br>CBT 시험 안내<br>시험 안내<br>자주 질문하는 Q&A<br><br>PART 01 정보시스템 기반 기출<br>1 운영체제<br>Section 01 운영체제의 개념<br>Section 02 프로세스 관리<br>Section 03 기억 장치 관리<br>Section 04 디스크 관리<br>Section 05 분산 운영체제<br>예상문제<br><br>2 정보 통신의 기초<br>Section 01 정보 통신<br>Section 02 데이터 전송의 기초<br>예상문제<br><br>3 데이터 전송 제어<br>Section 01 데이터 전송 제어<br>Section 02 회선 공유 기술<br>Section 03 통신망 기술<br>예상문제<br><br>4 통신 프로토콜<br>Section 01 통신 프로토콜(Protocol)<br>Section 02 인터넷 프로토콜(TCP/IP)<br>Section 03 신기술 동향<br>예상문제<br><br>5 애플리케이션 설계<br>Section 01 설계 모델링<br>Section 02 소프트웨어 아키텍처(Architecture)<br>Section 03 코드 설계<br>Section 04 파일 설계<br>예상문제<br><br>6 객체지향 기술<br>Section 01 객체지향 기술의 개념<br>Section 02 객체지향 개발 순서<br>Section 03 UML 다이어그램<br>Section 04 디자인 패턴(Design Pattern)<br>예상문제<br><br>7 테스트<br>Section 01 통합 구현 도구<br>Section 02 애플리케이션 테스트<br>Section 03 단위 테스트<br>Section 04 통합 테스트<br>Section 05 시스템 테스트<br>Section 06 성능 분석 및 품질 평가<br>예상문제<br>정답 및 해설<br><br>",
+            "index2" : "PART 02 프로그래밍 언어 활용<br>1 프로그래밍 언어 기초<br>Section 01 프로그램 언어와 번역<br>Section 02 자료 객체<br>예상문제<br><br>2 프로그래밍 언어 활용<br>Section 01 알고리즘과 코딩<br>Section 02 C 언어의 연산자<br>Section 03 C 언어의 제어문<br>Section 04 C 언어의 고급 기법<br>Section 05 Java(자바) 언어<br>Section 06 파이썬(Python)<br>Section 07 스크립트(Script) 언어<br>예상문제<br><br>3 프로그램 구현<br>Section 01 서버 프레임워크<br>Section 02 프로그램 개발 환경<br>Section 03 공통 모듈<br>예상문제<br><br>4 시스템 보안 구축<br>Section 01 정보 보호<br>Section 02 시스템 보안<br>Section 03 시스템 인증<br>예상문제<br><br>5 보안 공격 및 예방<br>Section 01 위험 관리<br>Section 02 악성 프로그램<br>Section 03 암호 기술<br>Section 04 정보 추적 기술<br>예상문제<br><br>",
+            "index3" : "PART 03 데이터베이스 활용<br>1 데이터베이스의 개요<br>Section 01 데이터베이스의 개요<br>Section 02 데이터베이스 관리 시스템(DBMS)<br>Section 03 데이터베이스의 종류<br>예상문제<br><br>2 논리 데이터베이스 설계<br>Section 01 개체와 속성<br>Section 02 정보 모델링과 데이터 모델링<br>Section 03 E-R 다이어그램(ERD) 작성<br>Section 04 관계 스키마와 함수적 종속<br>Section 05 데이터베이스의 정규화<br>예상문제<br><br>3 SQL<br>Section 01 SQL 명령어<br>Section 02 절차형 SQL<br>Section 03 인덱스와 뷰<br>Section 04 SQL 지원 도구<br>Section 05 병행 제어와 로킹<br>예상문제<br><br>4 물리 데이터베이스 설계<br>Section 01 물리 데이터 모델 설계<br>Section 02 저장 레코드 형식 설계<br>Section 03 반정규화 수행<br>Section 04 분산 데이터베이스 설계<br>예상문제<br><br>5 자료구조<br>Section 01 자료 표현 단위와 진법<br>Section 02 고정 소수점과 부동 소수점<br>Section 03 자료구조<br>Section 04 검색(Search, 탐색)<br>Section 05 정렬(Sort)<br>예상문제<br><br>예상문제 정답 및 해설<br>쏙쏙 찾아보는 INDEX<br><br>모의고사 2회분<br>시험장까지 함께가는 핵심이론(PDF 제공)"
+        },
+        {
+            "code" : "A03",
+            "subTitle" : "정보처리/사무자동화/정보기기",
+            "image" : "/www/project/images/01추천도서-정보처리기능사.png",
+            "title" : "2022 이기적 정보처리기능사 실기 기본서",
+            "writer" : "임승현(PATH)",
+            "page" : "424",
+            "price" : "18,000",
+            "publicationDate" : "2022-02-10",
+            "isbn" : "9788931464573",
+            "bookIntroduce" : "‘2022 이기적 정보처리기능사 실기 기본서’ 도서가 새롭게 출간되었습니다. 2022년 출제기준 및 출제유형에 맞는 이론과 문제들로 꼭꼭 채워진 도서로 시험에 대비하실 수 있습니다. 핵심이론으로 내용을 공부한 뒤, 도서 내에 있는 ‘합격을 다지는 예상문제’로 실제 시험이 어떻게 출제되는지 감을 잡아보세요. 그 후, 기출 변형 문제와 기출 복원 문제로 마무리 정리를 하시면 됩니다. 정보처리기능사 합격을 이기적이 응원합니다!",
+            "writerIntroduce" : "",
+            "index" : "PART 01 프로그래밍 언어 활용<br>CHAPTER 01 알고리즘 구현<br>- SECTION 01 알고리즘<br>- SECTION 02 순서도<br>CHAPTER 02 프로그래밍 언어 활용<br>- SECTION 01 프로그래밍 언어 활용<br>- SECTION 02 프로그래밍 언어 특성<br>- SECTION 03 라이브러리<br><br>PART 02 애플리케이션 테스트 수행<br>CHAPTER 01 에플리케이션 테스트 수행<br>- SECTION 01 테스트<br>- SECTION 02 프로젝트 수행 단계에 따른 테스트의 분류<br>- SECTION 03 테스트 케이스와 테스트 오라클<br>- SECTION 04 테스트 자동화<br>CHAPTER 02 애플리케이션 결함 조치<br>- SECTION 01 결함 관리<br>- SECTION 02 결함 조치<br>- SECTION 03 결함 조치 관리<br><br>PART 03 응용 SW 기초 기술 활용<br>CHAPTER 01 운영체제<br>- SECTION 01 운영체제 기초 활용<br>- SECTION 02 운영체제 기본 명령어 활용<br>- SECTION 03 운영체제 핵심 기능 파악<br>CHAPTER 02 네트워크<br>- SECTION 01 네트워크 기초 활용<br>- SECTION 02 네트워크 프로토콜 파악<br>- SECTION 03 네트워크 핵심 알고리즘<br>CHAPTER 03 데이터베이스<br>- SECTION 01 데이터베이스 종류 및 선정<br>- SECTION 02 관계형 데이터베이스 활용<br>- SECTION 03 데이터베이스 관리<br><br>PART 04 SQL<br>CHAPTER 01 기본 SQL<br>- SECTION 01 DDL<br>- SECTION 02 DML<br>- SECTION 03 DCL<br>- SECTION 04 데이터 사전 검색<br>CHAPTER 02 고급 SQL<br>- SECTION 01 인덱스 활용<br>- SECTION 02 뷰 활용<br>- SECTION 03 다중 테이블<br><br>PART 05 기출 변형 문제<br>CHAPTER 01 기출 변형 문제 01~10회<br>- SECTION 01 기출 변형 문제 01회<br>- SECTION 02 기출 변형 문제 02회<br>- SECTION 03 기출 변형 문제 03회<br>- SECTION 04 기출 변형 문제 04회<br>- SECTION 05 기출 변형 문제 05회<br>- SECTION 06 기출 변형 문제 06회<br>- SECTION 07 기출 변형 문제 07회<br>- SECTION 08 기출 변형 문제 08회<br>- SECTION 09 기출 변형 문제 09회<br>- SECTION 10 기출 변형 문제 10회<br><br>PART 06 기출 복원 문제<br>CHAPTER 01 기출 복원 문제 01~08회<br>- SECTION 01 기출 복원 문제 01회(2020년 01회)<br>- SECTION 02 기출 복원 문제 02회(2020년 02회)<br>- SECTION 03 기출 복원 문제 03회(2020년 03회)<br>- SECTION 04 기출 복원 문제 04회(2020년 04회)<br>- SECTION 05 기출 복원 문제 05회(2021년 01회)<br>- SECTION 06 기출 복원 문제 06회(2021년 02회)<br>- SECTION 07 기출 복원 문제 07회(2021년 03회)<br>- SECTION 08 기출 복원 문제 08회(2021년 04회)<br><br>PART 07 정답 및 해설<br>CHAPTER 01 기출 변형 문제 정답 및 해설<br>CHAPTER 02 기출 복원 문제 정답 및 해설",
+            "index2" : "",
+            "index3" : ""
+        },
+        {
+            "code" : "A02",
+            "subTitle" : "컴퓨터활용능력",
+            "image" : "/www/project/images/02추천도서-컴퓨터활용능력.png",
+            "title" : "2022 이기적 컴퓨터활용능력 1급 필기 기본서",
+            "writer" : "홍태성, 영진정보연구소",
+            "page" : "1008",
+            "price" : "30,000",
+            "publicationDate" : "2021-08-05",
+            "isbn" : "9788931464443",
+            "bookIntroduce" : "2022년부터 적용되는 현 출제기준을 완벽하게 반영한 본 도서는 필기시험을 준비하는 수험생을 위한 기본서로 다년간의 출제 경향을 철저히 분석하여 핵심 이론인 기본서(이론서) 3권과 기출 공략집 1권으로 분권하였습니다.<br>1권/2권/3권에서는 무료 동영상 강의와 함께 이론을 세세하게 공부할 수 있으며, 파트와 섹션마다 출제빈도를 정리하고 시험에 출제된 연도를 표기하여 수험생이 더욱 효율적으로 학습할 수 있도록 하였습니다. 또한 이론 학습 후에는 기출문제와 예상문제로 그때그때 학습한 내용을 바로 확인할 수 있도록 하였으며, 난이도가 높은 문제는 무료 동영상 강의를 추가하여 확실히 이해하고 넘어갈 수 있도록 하였습니다.<br>4권 기출 공략집에서는 자주 출제되는 기출문제 120선을 통해 최신 출제 경향을 파악하고, 2021년 상시 시험을 참고한 기출 변형 문제제 2회와 최신 기출문제 7회를 통해 실전처럼 실력을 확인할 수 있습니다.<br>이처럼 <2022 이기적 컴퓨터활용능력 1급 필기 기본서>는 수험생이 혼자서 단 한 권으로 합격할 수 있는 최적의 수험서입니다.",
+            "writerIntroduce" : "저자 : 홍태성<br><br>2008년부터 이기적 컴퓨터활용능력 필기 도서를 담당하고 있다. 이패스코리아에서 컴퓨터활용능력 강의를 하고 있으며, 강원교육과학정보원 SME, 고용노동부 직훈 교사를 역임하고 있다. 2019 교육부장관 표창장을 수상했으며, 컴퓨터활용능력 필기, 정보처리기사 필기, e-Test Professionals MS-EXCEL 등을 집필하였다.",
+            "index" : "출제 경향 분석<br>차례<br>QR 목록<br>도서 제공 자료 안내<br>이 책의 구성<br>시험 안내<br>CBT 시험 안내<br>자주 질문하는 Q&A<br><br>[1권] Part 1 컴퓨터 일반<br>Chapter 1. 운영체제 사용<br>Chapter 2. 컴퓨터 시스템 설정 변경<br>Chapter 3. 컴퓨터 시스템 관리<br>Chapter 4. 인터넷 자료 활용<br>Chapter 5. 컴퓨터 시스템 보호<br>정답 및 해설<br>쏙쏙 찾아보는 INDEX(1권, 2권, 3권)<br><br>[2권] Part 2 스프레드시트 일반<br>Chapter 1. 스프레드시트 개요<br>Chapter 2. 데이터 입력 및 편집<br>Chapter 3. 수식 활용<br>Chapter 4. 데이터 관리 및 분석<br>Chapter 5. 출력<br>Chapter 6. 차트 생성 및 수정<br>Chapter 7. 매크로 및 프로그래밍<br>정답 및 해설<br>쏙쏙 찾아보는 INDEX(2권)<br><br>[3권] Part 3 데이터베이스 일반<br>Chapter 1. 데이터베이스 개요<br>Chapter 2. 테이블(Table) 작성<br>Chapter 3. 쿼리(Query) 작성<br>Chapter 4. 폼(Form) 작성<br>Chapter 5. 보고서(Report) 작성<br>Chapter 6. 데이터베이스 프로그래밍<br>정답 및 해설<br>쏙쏙 찾아보는 INDEX(3권)<br><br>[4권-기출문제]<br>ㆍ자주 출제되는 기출문제 120선<br>ㆍ2021년 기출 변형 문제 2회<br>ㆍ최신 기출문제 3회<br>ㆍ기출문제 PDF 4회분(PDF 제공)<br>ㆍ시험장까지 함께 가는 핵심 요약(PDF 제공) : 이기적 스터디 카페에서 제공",
+            "index2" : "",
+            "index3" : ""
+        }
+    ]
+}

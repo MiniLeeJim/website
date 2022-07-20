@@ -2,7 +2,7 @@
     --nav-font : 400 18px 'Inter';
     --sec-title-font : 700 22px 'Inter';
     --list-font : 400 18px 'Inter';
-    --info-font : 400 18px 'Inter';
+    --info-font : 400 16px 'Inter';
 }
 footer{ height: auto; }
 .inner{ width: 100%; }

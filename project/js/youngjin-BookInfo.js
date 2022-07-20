@@ -1,8 +1,68 @@
 $(function() {
-    //snb/subTitle 변경 함수
+    //다른 페이지에서 해시 찾아 해당 책 정보 출력
+    let bookJson = JSON.parse(JSON.stringify(bookList));
+
+    function bookInfoSet(book, index){
+        $('.sub_title, .mini_title').text(bookJson[book][index]['subTitle'])
+        $('.book_title').text(bookJson[book][index]['title']);
+        $('.info_name').text(bookJson[book][index]['writer']);
+        $('.info_page').text(bookJson[book][index]['page']);
+        $('.info_price').text(bookJson[book][index]['price']);
+        $('.info_date').text(bookJson[book][index]['publicationDate']);
+        $('.info_isbn').text(bookJson[book][index]['isbn']);
+        $('.intro_book .box_word').html(bookJson[book][index]['bookIntroduce']);
+        $('.intro_writer .box_word').html(bookJson[book][index]['writerIntroduce']);
+        $('.intro_index .box_word').html(bookJson[book][index]['index'] + bookJson[book][index]['index2'] + bookJson[book][index]['index3'] );
+        imgAdd(bookJson, book, index);
+
+        //snb
+        let code = bookJson[book][index]['code'];
+        $('.' + code).addClass('on');
+
+        //path>middle
+        let codeNum = code.substr(0,1);
+        $('.' + codeNum).addClass('on');
+    }
+
+    function imgAdd(bookJson, book, index){
+        let bookImg = $('<img>');
+        bookImg.attr('src', bookJson[book][index]['image']);
+        bookImg.attr('alt', "bookImg");
+
+        let bookImgStyle = {
+            'width' : '100%',
+            'height' : '100%',
+            'display' : 'block'
+        }
+        bookImg.css(bookImgStyle);
+        
+        $('.img_book').html(bookImg);
+    }
+
+
+    if (location.hash == '#book1') {
+        bookInfoSet('newbook', 0)
+    } else if(location.hash == '#book2') {
+        bookInfoSet('newbook', 1)
+    } else if(location.hash == '#book3'){
+        bookInfoSet('newbook', 2)
+    } else if(location.hash == '#book4'){
+        bookInfoSet('bestbook', 0)
+    } else if(location.hash == '#book5'){
+        bookInfoSet('bestbook', 1)
+    } else{
+        bookInfoSet('bestbook', 2)
+    }
+
+    if(location.hash == '#book1' || location.hash == '#book2'){
+        $(".snb.practical").removeClass('out');
+    } else{
+        $(".snb.it").removeClass('out');
+    }
+
+    //subTitle 출력, snb 감추기
     function subTitle() {
         $(".snb").addClass('out');
-        $(".sec1 .sub_title").text($(".snb li.on").text());
         $(".sec1 .sub_title").addClass('on');
     };
     //500에 path 감추기 함수
@@ -23,8 +83,13 @@ $(function() {
             closePath();
         }
         else {
-            $(".snb").removeClass('out');
             $(".sec1 .sub_title").removeClass('on');
+            if(location.hash == '#book1' || location.hash == '#book2'){
+                $(".snb.practical").removeClass('out');
+            } else{
+                $(".snb.it").removeClass('out');
+            }
+            
         }
     });
 
