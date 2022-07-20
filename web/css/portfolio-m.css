@@ -10,6 +10,7 @@ nav > ul > li > a{
     font-size: 20px;
 }
 
+.sec01 .contents h1{ font: 400 60px 'Dosis'; }
 .sec01 .wheel{ display: none; }
 
 

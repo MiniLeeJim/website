@@ -11,12 +11,12 @@
     word-break: keep-all;
 }
 
-:root{
+/* :root{
     --sec01-h1-font: 400 100px 'Dosis';
     --font-color: #353535;
     --hover-color: #a6c1ee;
     --youngjin-color: #E9EEF0;
-}
+} */
 
 
 html{ height: 100vh; }
@@ -59,10 +59,10 @@ nav > ul > li > a{
     line-height: 100px;
     padding: 0 50px;
     font-size: 26px;
-    color: var(--font-color);
+    color: #353535;
 }
 nav > ul > li:hover > a{
-    color: var(--hover-color);
+    color: #a6c1ee;
 }
 nav.on{
     top: 0;
@@ -94,15 +94,15 @@ nav.on{
     position: relative;
 }
 .sec01 .contents h1{
-    font: var(--sec01-h1-font);
-    color: var(--font-color);
+    font: 400 100px 'Dosis';
+    color: #353535;
     text-align: center;
 }
 .sec01 ul{ margin: 50px 0; }
 .sec01 ul > li > a{
     display: flex;
     position: relative;
-    color: var(--font-color);
+    color: #353535;
 }
 .sec01 ul > li > a span{
     display: block;
@@ -117,7 +117,7 @@ nav.on{
     opacity: 0;
     font-size: 30px;
 }
-.sec01 ul > li:hover span:last-child{ color: var(--hover-color); }
+.sec01 ul > li:hover span:last-child{ color: #a6c1ee; }
 .sec01 ul > li:hover .arrow{ opacity: 1; }
 
 
@@ -233,7 +233,7 @@ nav.on{
     line-height: 50px;
     font-size: 26px;
     padding: 0 20px;
-    color: var(--font-color);
+    color: #353535;
 }
 
 .sec03 .project-box{
@@ -241,7 +241,7 @@ nav.on{
     min-height: 550px;
     display: flex;
     justify-content: space-between;
-    color: var(--font-color);
+    color: #353535;
 }
 .sec03 .project-box .left{
     width: 610px;
@@ -255,7 +255,7 @@ nav.on{
 .sec03 .contents .left > .txt{
     position: absolute;
     left: 5%;
-    top: 60px;
+    top: 80px;
     z-index: 100;
     font-size: 20px;
     opacity: 0.7;
@@ -330,16 +330,16 @@ nav.on{
     margin-right: 20px;
 }
 .sec03 #project-a .info .main-color .co01{ background-color: #fff; }
-.sec03 #project-a .info .main-color .co02{ background-color: var(--youngjin-color); }
+.sec03 #project-a .info .main-color .co02{ background-color: #E9EEF0; }
 .sec03 .project-box .info .wrap-box{ margin: 0 0 30px; }
 .sec03 .project-box .info .wrap-box > div{ padding: 20px 0; }
 .sec03 .project-box .info .moreview > a{
     font: 400 18px '맑은 고딕', 'sans-serif';
-    color: var(--font-color);
+    color: #353535;
     display: block;
     padding: 8px 15px;
     border: 1px solid rgb(128, 134, 136);
-    background-color: var(--youngjin-color);
+    background-color: #E9EEF0;
 }
 .sec03 .project-box .info .moreview > a:last-child{ margin-left: 40px; }
 .sec03 .project-box .info .moreview > a:hover{ opacity: 0.7; }
