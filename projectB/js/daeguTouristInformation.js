@@ -58,16 +58,14 @@ $(function(){
     $('.tag-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        prevArrow : $('.prev-arrow-tag'), 
-        nextArrow : $('.next-arrow-tag'), 
+        infinite: false,
     });
 
     //축제 슬라이드
     $('.poster-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        prevArrow : $('.prev-arrow-poster'), 
-        nextArrow : $('.next-arrow-poster'), 
+        infinite: false,
     });
     $('.poster-info .in02, .in03, .in04, .in05').hide();
     $('.poster-slider').on('afterChange', function(e, slick, currentSlide){
