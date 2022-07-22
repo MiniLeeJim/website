@@ -92,6 +92,14 @@ nav.on{
 
 
 
+
+
+
+
+
+
+
+
 /**********header**********/
 header{
     width: 250px;
@@ -143,11 +151,6 @@ header .logo{
     border-radius: 50%; background-color: #ddd;
     margin: 0 0 30px;
 }
-.sns-gr .blog{ background: url(/www/projectB/images/blog.svg) no-repeat center / contain; }
-.sns-gr .facebook{ background: url(/www/projectB/images/face.svg) no-repeat center / contain; }
-.sns-gr .instar{ background: url(/www/projectB/images/instar.svg) no-repeat center / contain; }
-.sns-gr .kakao{ background: url(/www/projectB/images/kakao.svg) no-repeat center / contain; }
-.sns-gr .youtube{ background: url(/www/projectB/images/youtube.svg) no-repeat center / contain; }
 
 
 /******** 풀페이지 슬라이더 ********/
@@ -391,7 +394,6 @@ header .logo{
 .tag-txt{
     padding: 40px 0;
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -402,21 +404,21 @@ header .logo{
     margin: 10px 15px;
     cursor: pointer;
 }
-
-.sec2 .tag .slick-prev:before,
-.sec2 .tag .slick-next:before{
-    height: 80px;
+.custom-arrow-tag{
+    position: absolute;
+    left: 60px;
+    bottom: -15px;
+    display: flex;
+    flex-direction: column;
     transform: rotate(270deg);
 }
-.sec2 .tag .slick-prev{
-    top: calc(50% - 30px);
-    left: 0;
+.prev-arrow-tag, .next-arrow-tag{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
-.sec2 .tag .slick-next{
-    top: calc(50% - 30px);
-    right: 25px;
-}
-
+.prev-arrow-tag{ background: rgba(0,0,0,0.1) url(/www/projectB/images/expand_less_FILL0_wght400_GRAD0_opsz48.svg) no-repeat center / cover; }
+.next-arrow-tag{ background: rgba(0,0,0,0.1) url(/www/projectB/images/expand_more_FILL0_wght400_GRAD0_opsz48.svg) no-repeat center / cover; margin-top: 25px;}
 .sec2 .festival{
     width: 100%;
     height: 60%;
@@ -454,18 +456,21 @@ header .logo{
     width: 400px;
     height: 450px;
 }
-.sec2 .festival .slick-prev:before,
-.sec2 .festival .slick-next:before{
-    height: 80px;
+.prev-arrow-poster, .next-arrow-poster{
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 20px);
     transform: rotate(270deg);
 }
-.sec2 .festival .slick-prev{
-    top: calc(50% - 40px);
-    left: -40px;
+.prev-arrow-poster{
+    background: url(/www/projectB/images/expand_less_FILL0_wght400_GRAD0_opsz48.svg) no-repeat center / cover;
+    left: -55px;
 }
-.sec2 .festival .slick-next{
-    top: calc(50% - 40px);
-    right: -15px;
+.next-arrow-poster{
+    background: url(/www/projectB/images/expand_more_FILL0_wght400_GRAD0_opsz48.svg) no-repeat center / cover;
+    right: -55px;
 }
 .sec2 .contents .poster-info{
     margin-left: 50px;
@@ -559,16 +564,16 @@ header .logo{
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    
     /* overflow: hidden; */
 }
-.sec3 .slick-track{ height: auto !important; }
-.sec3 .box{
+.sec3 .slick-vertical .slick-slide{
+    display: flex;
+    height: 290px;
     border: 1px solid #000;
+}
+.sec3_box{
     width: 100%;
     max-width: 1000px;
-    height: 300px;
-    display: flex;
     align-items: center;
     position: relative;
     padding: 20px;

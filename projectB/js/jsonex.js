@@ -472,21 +472,21 @@ function detailIntro(contentId, index, type, num, sigunguCode){ //소개정보
 
 
 function loadData(){
-    // conListSet(12, detailCommon); //관광지
-    // conListSet(14, detailCommon); //문화시설
-    // conListSet(39, detailCommon); //음식
-    // festivalListSet(15, detailCommon); //축제
+    conListSet(12, detailCommon); //관광지
+    conListSet(14, detailCommon); //문화시설
+    conListSet(39, detailCommon); //음식
+    festivalListSet(15, detailCommon); //축제
     for(var i=0; i<8; i++){ //숙박
         lodgmentListSet(i+1, detailCommon);
     }
-    // for(var i=0; i<tagCode.length; i++){ //태그
-    //     tagListSet(
-    //         tagCode[i].code[0], //type
-    //         tagCode[i].code[1], //cat1
-    //         tagCode[i].code[2], //cat2
-    //         tagCode[i].code[3], //cat3
-    //     );
-    // }
+    for(var i=0; i<tagCode.length; i++){ //태그
+        tagListSet(
+            tagCode[i].code[0], //type
+            tagCode[i].code[1], //cat1
+            tagCode[i].code[2], //cat2
+            tagCode[i].code[3], //cat3
+        );
+    }
 
     return(dataAll);
 }
@@ -804,8 +804,43 @@ function imgAdd(el, index, imgAddr){
     }
 }
 
-function copyBox(){
-    const testDiv = document.querySelector('.lodgment-slide');
+// window.addEventListener('load', function(){
+//     console.log(newData);
+
+//     // console.log(newData[0].tourism[0][1].tit);
+//     setTimeout(function(){
+//         for(var i=0; i<5; i++){
+//             sec1Tit[i].innerHTML = (newData[0].tourism[i][1].tit);
+//             imgAdd(sec1Thumbnail, i, newData[0].tourism[i][2].img);
+//             sec1Overview[i].innerHTML = (newData[0].tourism[i][3].overview);
+//             sec1addr[i].innerHTML = (newData[0].tourism[i][4].addr);
+//             sec1page[i].innerHTML = (newData[0].tourism[i][5].homepage);
+//         }
+//         for(var i=0; i<5; i++){
+//             sec2conTit[i].innerHTML = (newData[5].tag[0].historic[i][0].tit);
+//             imgAdd(sec2conBox, i, newData[5].tag[0].historic[i][1].firstimage);
+//         }
+//         for(var i=0; i<5; i++){
+//             imgAdd(sec2posterImg, i, newData[2].festival[i][2].img);
+//             sec2posterInfoTit[i].innerHTML = (newData[2].festival[i][1].tit);
+//             sec2posterInfoOverview[i].innerHTML = (newData[2].festival[i][3].overview);
+//             sec2posterInfoAddr[i].innerHTML = (newData[2].festival[i][4].addr);
+//             sec2posterInfoPage[i].innerHTML = (newData[2].festival[i][5].homepage);
+//         }
+
+//     }, 10000);
+    
+// })
+
+
+
+
+// console.log(dataAll);
+// console.log(dataAll[5].tag[0].historic[0][0].tit);
+
+
+function copyBox()  {
+    const testDiv = document.querySelector('.sec3_box');
     
     // 노드 복사하기
     const newNode = testDiv.cloneNode(true);
@@ -817,57 +852,7 @@ function copyBox(){
     testDiv.after(newNode);
 }
 
-
-window.addEventListener('load', function(){
-    // console.log(newData);
-    // console.log(newData[4][0]);
-    // for(var i=0; i<4; i++){
-    //     copyBox();
-    // }
-
-    // console.log(newData[0].tourism[0][1].tit);
-    setTimeout(function(){
-        // for(var i=0; i<5; i++){
-        //     sec1Tit[i].innerHTML = (newData[0].tourism[i][1].tit);
-        //     imgAdd(sec1Thumbnail, i, newData[0].tourism[i][2].img);
-        //     sec1Overview[i].innerHTML = (newData[0].tourism[i][3].overview);
-        //     sec1addr[i].innerHTML = (newData[0].tourism[i][4].addr);
-        //     sec1page[i].innerHTML = (newData[0].tourism[i][5].homepage);
-        // }
-        // for(var i=0; i<5; i++){
-        //     sec2conTit[i].innerHTML = (newData[5].tag[0].historic[i][0].tit);
-        //     imgAdd(sec2conBox, i, newData[5].tag[0].historic[i][1].firstimage);
-        // }
-        // for(var i=0; i<5; i++){
-        //     imgAdd(sec2posterImg, i, newData[2].festival[i][2].img);
-        //     sec2posterInfoTit[i].innerHTML = (newData[2].festival[i][1].tit);
-        //     sec2posterInfoOverview[i].innerHTML = (newData[2].festival[i][3].overview);
-        //     sec2posterInfoAddr[i].innerHTML = (newData[2].festival[i][4].addr);
-        //     sec2posterInfoPage[i].innerHTML = (newData[2].festival[i][5].homepage);
-        // }
-        
-        
-    }, 5000);
-    
-})
-
-let bt1 = document.querySelectorAll('.sec3 .type-bt button');
-
-// bt1[0].addEventListener('click', function(){
-//     for(var i=0; i<4; i++){
-//         copyBox()
-//     }
-// });
-copyBox()
-
-// console.log(dataAll);
-// console.log(dataAll[5].tag[0].historic[0][0].tit);
-
-
-
-
-
-
+// copyBox();
 
 
 // CORS이슈, 외부API를 사용하고 있는 입장에서는 서버를 제어할 수 없으므로 구글링에 나오는 해결법 중 HTTP 응답 헤더인 Access-Control-Allow-Origin 를 설정할 수 없음
